@@ -34,6 +34,7 @@
             this.myButton3 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton2 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton1 = new WindowsFormsControlLibrary1.MyButton();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -59,22 +60,24 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(250, 236);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(619, 182);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(619, 70);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // myButton3
             // 
-            this.myButton3.FillColor1 = System.Drawing.Color.Orange;
-            this.myButton3.FillColor2 = System.Drawing.Color.Gray;
+            this.myButton3.FillColor1 = System.Drawing.Color.Red;
+            this.myButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.myButton3.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
-            this.myButton3.Location = new System.Drawing.Point(37, 295);
+            this.myButton3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myButton3.Location = new System.Drawing.Point(37, 236);
             this.myButton3.Name = "myButton3";
-            this.myButton3.Size = new System.Drawing.Size(145, 92);
+            this.myButton3.Size = new System.Drawing.Size(145, 70);
             this.myButton3.TabIndex = 3;
-            this.myButton3.Text = "myButton3";
+            this.myButton3.Text = "GetPhotoLINQ";
+            this.myButton3.Click += new System.EventHandler(this.myButton3_Click);
             // 
             // myButton2
             // 
@@ -84,9 +87,9 @@
             this.myButton2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myButton2.Location = new System.Drawing.Point(37, 161);
             this.myButton2.Name = "myButton2";
-            this.myButton2.Size = new System.Drawing.Size(145, 78);
+            this.myButton2.Size = new System.Drawing.Size(145, 55);
             this.myButton2.TabIndex = 2;
-            this.myButton2.Text = "Getphoto";
+            this.myButton2.Text = "GetphotoADO.NET";
             this.myButton2.Click += new System.EventHandler(this.myButton2_Click);
             // 
             // myButton1
@@ -102,11 +105,22 @@
             this.myButton1.Text = "GetProductPhoto";
             this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(250, 359);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(619, 200);
+            this.flowLayoutPanel2.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 586);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.myButton3);
@@ -129,6 +143,7 @@
         private WindowsFormsControlLibrary1.MyButton myButton3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
 

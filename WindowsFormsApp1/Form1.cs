@@ -42,6 +42,11 @@ namespace WindowsFormsApp1
 
         }
 
+        /// <summary>
+        /// ADO.NET 寫法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void myButton2_Click(object sender, EventArgs e)
         {
             List<UserControl1> Uscommtool = new List<UserControl1>();
@@ -66,8 +71,7 @@ namespace WindowsFormsApp1
                             us.BtnName = name;
                         }
                         Uscommtool.Add(us);
-                    }                    
-
+                    }                  
                 }
             }
             for (int i = 0; i <= Uscommtool.Count - 1; i++)
@@ -76,6 +80,41 @@ namespace WindowsFormsApp1
             }
 
 
+        }
+
+        private void myButton3_Click(object sender, EventArgs e)
+        {
+            var query = from ph in dbContext.ProductPhoto
+                        select ph.LargePhoto;
+
+            foreach(var s in query)
+            {                
+                PictureBox ptb = new PictureBox();
+                ptb.Size = new Size(125, 100);
+                ptb.BackColor = Color.White;
+                ptb.MouseEnter += Ptb_MouseEnter;
+                ptb.MouseLeave += Ptb_MouseLeave;
+
+                using (MemoryStream ms = new MemoryStream(s))
+                {
+                    ptb.Image = Image.FromStream(ms);
+                }
+                this.flowLayoutPanel2.Controls.Add(ptb);
+            }
+        }
+
+        private void Ptb_MouseLeave(object sender, EventArgs e)
+        {
+            PictureBox ptbML = ((PictureBox)sender);
+            ptbML.Size =new Size(125, 100);
+            ptbML.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void Ptb_MouseEnter(object sender, EventArgs e)
+        {
+            PictureBox ptbME = ((PictureBox)sender);
+            ptbME.Size = new Size(150, 200);
+            ptbME.BorderStyle = BorderStyle.FixedSingle;
         }
     }
 }
