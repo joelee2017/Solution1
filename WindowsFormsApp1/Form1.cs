@@ -84,10 +84,14 @@ namespace WindowsFormsApp1
 
         private void myButton3_Click(object sender, EventArgs e)
         {
+            //LINQ
             var query = from ph in dbContext.ProductPhoto
                         select ph.LargePhoto;
 
-            foreach(var s in query)
+            //Lambda
+            var query1 = dbContext.ProductPhoto.Select(p => p.LargePhoto);
+
+            foreach (var s in query)
             {                
                 PictureBox ptb = new PictureBox();
                 ptb.Size = new Size(125, 100);
