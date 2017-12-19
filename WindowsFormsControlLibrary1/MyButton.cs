@@ -66,11 +66,19 @@ namespace WindowsFormsControlLibrary1
                     g.FillEllipse(brush1, this.ClientRectangle);
                     break;
                 case Shape.Rectangle:
-                    g.FillEllipse(brush1, this.ClientRectangle);
+                    g.FillRectangle(brush1, this.ClientRectangle);
                     break;
             }
 
-            g.FillEllipse(brush1, this.ClientRectangle);
+            //g.FillEllipse(brush1, this.ClientRectangle);
+
+
+            //=========================================
+            //Draw String
+            float x, y;
+            x = (this.ClientRectangle.Width - g.MeasureString(base.Text, base.Font).Width) / 2;
+            y = (this.ClientRectangle.Height - g.MeasureString(base.Text, base.Font).Height) / 2;
+            g.DrawString(base.Text, base.Font, Brushes.White, x, y);
         }
     }
 }

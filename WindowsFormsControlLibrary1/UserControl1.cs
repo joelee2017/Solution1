@@ -16,5 +16,29 @@ namespace WindowsFormsControlLibrary1
         {
             InitializeComponent();
         }
+
+        public string BtnName
+        {
+            get
+            {
+                return this.textBox1.Text;
+            }
+            set
+            {
+                this.textBox1.Text = value;
+            }
+        }
+
+        public Image Btnpicture
+        {
+            get
+            {
+                return this.pictureBox1.Image;
+            }
+            set
+            {
+                this.pictureBox1.Image = value;
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "Windows
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibrary1", "WindowsFormsControlLibrary1\WindowsFormsControlLibrary1.csproj", "{4501EBB9-67D5-44A2-80CB-D2CDE894C6B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{1D102C7C-B8B1-4CEF-BE1B-5DDE4FBE24BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBDataModel", "DataModel\DBDataModel.csproj", "{1D102C7C-B8B1-4CEF-BE1B-5DDE4FBE24BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
