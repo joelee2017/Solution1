@@ -9,16 +9,33 @@ using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary1
 {
+    
     /// <summary>
     /// 創造自己的Button控制項含實作顏色、形狀、屬性
     /// </summary>
    public class MyButton :Control
     {
+        public MyButton()
+        {
+            this.FillColor1 = Color.Orange;
+            this.FillColor2 = Color.Gray;
+        }
+        
         public Color FillColor1 { get; set; }
         public Color FillColor2 { get; set; }
 
         public enum Shape { Ellipse, Rectangle}
-        public Shape FillShape { get; set; }
+
+
+        /// <summary>
+        /// 創建控制項欄位，失效時能自動重繪
+        /// </summary>
+        private Shape m_FillShape;
+        public Shape FillShape
+        {
+            get { return m_FillShape; }
+            set { m_FillShape = value; this.Invalidate(); }
+        }
 
 
         /// <summary>
@@ -29,16 +46,30 @@ namespace WindowsFormsControlLibrary1
         /// ClientRectangle.Height 控制項工作區矩形，結構高度
         ///  g.FillEllipse(brush1, this.ClientRectangle);
         ///  橢圓(顏色，取得控制項工作區域)
+        ///  g.SmoothingMode = SmoothingMode.AntiAlias;
+        /// 反鋸齒
         /// </summary>
         /// <param name="e"></param>
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+
             Point pt1 = new Point(0,0);
             Point pt2 = new Point(0, this.ClientRectangle.Height);
 
             LinearGradientBrush brush1 = new LinearGradientBrush
                                         (pt1,pt2, this.FillColor1, this.FillColor2);
+            switch(this.FillShape)
+            {
+                case Shape.Ellipse:
+                    g.FillEllipse(brush1, this.ClientRectangle);
+                    break;
+                case Shape.Rectangle:
+                    g.FillEllipse(brush1, this.ClientRectangle);
+                    break;
+            }
+
             g.FillEllipse(brush1, this.ClientRectangle);
         }
     }
