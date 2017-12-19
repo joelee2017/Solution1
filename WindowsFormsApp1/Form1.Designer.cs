@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.myButton1 = new WindowsFormsControlLibrary1.MyButton();
+            this.SuspendLayout();
+            // 
+            // myButton1
+            // 
+            this.myButton1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.myButton1.FillColor1 = System.Drawing.Color.Empty;
+            this.myButton1.FillColor2 = System.Drawing.Color.Empty;
+            this.myButton1.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
+            this.myButton1.Location = new System.Drawing.Point(53, 72);
+            this.myButton1.Name = "myButton1";
+            this.myButton1.Size = new System.Drawing.Size(75, 23);
+            this.myButton1.TabIndex = 0;
+            this.myButton1.Text = "myButton1";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(578, 383);
+            this.Controls.Add(this.myButton1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private WindowsFormsControlLibrary1.MyButton myButton1;
     }
 }
 
