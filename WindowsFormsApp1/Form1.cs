@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            this.flowLayoutPanel2.AutoScroll = true;
+            
         }
 
         /// <summary>
@@ -32,9 +34,7 @@ namespace WindowsFormsApp1
         {
             var query = from p in dbContext.ProductPhoto
                         select p;
-
             dbContext.Database.Log=Console.Write;
-
             this.dataGridView1.DataSource = query.ToList();
 
             //Local =ObservableCollection<ProductPhoto>
@@ -49,6 +49,8 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void myButton2_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel1.DataBindings.Clear();
+
             List<UserControl1> Uscommtool = new List<UserControl1>();
             UserControl1 us1 = new UserControl1();
             string ADW = Settings.Default.ADVW;
@@ -84,6 +86,7 @@ namespace WindowsFormsApp1
 
         private void myButton3_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel2.DataBindings.Clear();
             //LINQ
             var query = from ph in dbContext.ProductPhoto
                         select ph.LargePhoto;
@@ -119,6 +122,47 @@ namespace WindowsFormsApp1
             PictureBox ptbME = ((PictureBox)sender);
             ptbME.Size = new Size(150, 200);
             ptbME.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void myButton4_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.DataBindings.Clear();
+            flowLayoutPanel2.DataBindings.Clear();
+            //var ProductList= this.dbContext.ProductPhoto.ToList();
+            List<ProductPhoto> ProductList = this.dbContext.ProductPhoto.ToList();
+
+            for(int i=0; i<=ProductList.Count-1;i++)
+            {
+                MyItemTemplate x = new MyItemTemplate();
+
+                x.Desc = ProductList[i].ModifiedDate.ToShortDateString();
+                x.ImageBytes = ProductList[i].LargePhoto;
+                //x.ImageURL=
+                this.flowLayoutPanel2.Controls.Add(x);
+                //=========================================
+                // 屬性 Wrap Contents 換行栽剪 橫式顯示
+                MyItemTemplate y = new MyItemTemplate();
+                y.Desc = ProductList[i].ModifiedDate.ToShortDateString();
+                y.ImageBytes = ProductList[i].LargePhoto;
+                //x.ImageURL=
+                this.flowLayoutPanel1.Controls.Add(y);
+
+
+                Application.DoEvents();//處理完訊息後在傳出
+            }
+        }
+
+        /// <summary>
+        /// 呼叫外部方案進來，使用外部功能
+        /// global::PhotoDataModel_V2.PhotoDataSource.Search();
+        /// global NameSpace的父類別
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void myButton5_Click(object sender, EventArgs e)
+        {
+            var PhotoList = global::PhotoDataModel_V2.PhotoDataSource.Search();
+            this.dataGridView1.DataSource = PhotoList;
         }
     }
 }
