@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3182E046-FA39-4B71-9D95-FF04224B8C51}</ProjectGuid>
+    <ProjectGuid>{4D5EA5A2-F11D-4EF0-AC37-D79E236178DC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfApp1</RootNamespace>
-    <AssemblyName>WpfApp1</AssemblyName>
+    <RootNamespace>WpfApp_HW</RootNamespace>
+    <AssemblyName>WpfApp HW</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,16 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="1-1.AP架構\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="2-1.XAML語言\Windows_XAML_Lang1.xaml.cs">
-      <DependentUpon>Windows_XAML_Lang1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Window_XAML_Lang2.xaml.cs">
-      <DependentUpon>Window_XAML_Lang2.xaml</DependentUpon>
-    </Compile>
-    <Page Include="1-1.AP架構\MainWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -72,22 +62,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="1-1.AP架構\MainWindow.xaml.cs">
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="1-1.AP架構\Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="2-1.XAML語言\Windows_XAML_Lang1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Window_XAML_Lang2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -103,6 +85,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -116,48 +101,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="3-1.WPF ControlsUI\" />
-    <Folder Include="4-1.WPF應用\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="圖庫\139-16122Q60053.jpg" />
-    <Resource Include="圖庫\1483416288976.jpg" />
-    <Resource Include="圖庫\1483503509137.jpg" />
-    <Resource Include="圖庫\1483601927981.jpg" />
-    <Resource Include="圖庫\1483601974347.jpg" />
-    <Resource Include="圖庫\1483601992641.jpg" />
-    <Resource Include="圖庫\1492741695203.jpg" />
-    <Resource Include="圖庫\1492741710670.jpg" />
-    <Resource Include="圖庫\153H11591-18.jpg" />
-    <Resource Include="圖庫\153H135G-14.jpg" />
-    <Resource Include="圖庫\153H13c2-1.jpg" />
-    <Resource Include="圖庫\153H15Q2-15.jpg" />
-    <Resource Include="圖庫\153H1MH-8.jpg" />
-    <Resource Include="圖庫\158_SXDn30G5663903372dmU_large.jpg" />
-    <Resource Include="圖庫\22-1609101F0212U.jpg" />
-    <Resource Include="圖庫\22-160F9213Z1K7.jpg" />
-    <Resource Include="圖庫\32-1G01114151H96.jpg" />
-    <Resource Include="圖庫\32-1G011141534608.jpg" />
-    <Resource Include="圖庫\5-160512144015.jpg" />
-    <Resource Include="圖庫\6-1F104141Z4.jpg" />
-    <Resource Include="圖庫\6-1F104142U6.jpg" />
-    <Resource Include="圖庫\73689e9e7833630000b6.jpg" />
-    <Resource Include="圖庫\c524f7d4jw1ej551n8g4wj218g0p0tnz.jpg" />
-    <Resource Include="圖庫\c524f7d4jw1ej551rjisij20y80ncn7u.jpg" />
-    <Resource Include="圖庫\c524f7d4jw1ej551xbiorj20yu0oeqga.jpg" />
-    <Resource Include="圖庫\changjingtupianhuihua4.jpg" />
-    <Resource Include="圖庫\fengjingchahuatupian.jpg" />
-    <Resource Include="圖庫\images %281%29.jpg" />
-    <Resource Include="圖庫\images %282%29.jpg" />
-    <Resource Include="圖庫\images %283%29.jpg" />
-    <Resource Include="圖庫\images %284%29.jpg" />
-    <Resource Include="圖庫\images %285%29.jpg" />
-    <Resource Include="圖庫\images.jpg" />
-    <Resource Include="圖庫\img_1106029.jpg" />
-    <Resource Include="圖庫\img_1106036.jpg" />
-    <Resource Include="圖庫\img_1106040.jpg" />
-    <Resource Include="圖庫\uAa4u9F.jpg" />
-    <Resource Include="圖庫\下載.jpg" />
+    <ProjectReference Include="..\WindowsFormsApp1\WindowsFormsApp1.csproj">
+      <Project>{78390ac3-5f55-434b-8c8e-e505a3f8626d}</Project>
+      <Name>WindowsFormsApp1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace WpfApp_HW
 {
     /// <summary>
     /// MainWindow.xaml 的互動邏輯
@@ -23,17 +23,6 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("hihi");
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Window1 w = new Window1();
-            w.Show();
         }
     }
 }

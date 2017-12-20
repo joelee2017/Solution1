@@ -26,11 +26,18 @@ namespace WpfApp1
         //    w.Show();            
         //}
 
+
+        /// <summary>
+        ///  this.ShutdownMode = ShutdownMode.OnLastWindowClose
+        ///  最後一個視窗關閉才真正關閉程式
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)//覆寫原來的方法
         {
             this.ShutdownMode = ShutdownMode.OnLastWindowClose;//關閉事件
 
-            Window w = new MainWindow();//啟動事件
+            //創建父類別  一個新的視窗
+            Window w = new Window_XAML_Lang2();//啟動事件
             w.Show();
         }
     }
