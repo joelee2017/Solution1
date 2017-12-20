@@ -9,11 +9,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary1
 {
-    
+
     /// <summary>
     /// 創造自己的Button控制項含實作顏色、形狀、屬性
+    /// 顏色屬性 FillColor1, FillColor2
+    /// 形狀 Ellipse, Rectangle
     /// </summary>
-   public class MyButton :Control
+    public class MyButton :Control
     {
         public MyButton()
         {
@@ -60,7 +62,8 @@ namespace WindowsFormsControlLibrary1
 
             LinearGradientBrush brush1 = new LinearGradientBrush
                                         (pt1,pt2, this.FillColor1, this.FillColor2);
-            switch(this.FillShape)
+
+            switch(this.FillShape)//創建兩種屬性 圓形、長方形
             {
                 case Shape.Ellipse:
                     g.FillEllipse(brush1, this.ClientRectangle);
@@ -74,7 +77,7 @@ namespace WindowsFormsControlLibrary1
 
 
             //=========================================
-            //Draw String
+            //Draw String 顯示字型屬性(形狀中的 文字置中)
             float x, y;
             x = (this.ClientRectangle.Width - g.MeasureString(base.Text, base.Font).Width) / 2;
             y = (this.ClientRectangle.Height - g.MeasureString(base.Text, base.Font).Height) / 2;
