@@ -61,7 +61,7 @@
     <Compile Include="2-1.XAML語言\Windows_XAML_Lang1.xaml.cs">
       <DependentUpon>Windows_XAML_Lang1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window_XAML_Lang2.xaml.cs">
+    <Compile Include="2-1.XAML語言\Window_XAML_Lang2.xaml.cs">
       <DependentUpon>Window_XAML_Lang2.xaml</DependentUpon>
     </Compile>
     <Page Include="1-1.AP架構\MainWindow.xaml">
@@ -84,7 +84,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Window_XAML_Lang2.xaml">
+    <Page Include="2-1.XAML語言\Window_XAML_Lang2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
