@@ -8,8 +8,12 @@
         Title="Window_WPFControls_1" Height="300" Width="300">
     <Grid>
         <TabControl Background="AliceBlue" Margin="5">
-            <TabItem Header="絕對配置" FontFamily="Consolas" FontSize="12"></TabItem>
-            <TabItem Header="動態配置" FontFamily="Consolas" FontSize="12"></TabItem>
+            <TabItem Header="絕對配置" FontFamily="Consolas" FontSize="12">
+                <Button Content="X" HorizontalAlignment="Right" Margin="0,6,7,0" VerticalAlignment="Top" Width="25" Height="19" Click="Button_Click"/>
+            </TabItem>
+            <TabItem Header="動態配置" FontFamily="Consolas" FontSize="12">
+                <Button Content="Button" HorizontalAlignment="Center" Margin="17,30,19,30" VerticalAlignment="Center" Width="240" Height="135"/>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

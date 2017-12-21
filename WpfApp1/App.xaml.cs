@@ -39,7 +39,7 @@ namespace WpfApp1
 
             //創建父類別  一個新的視窗
             //Window w = new Window_XAML_Lang2();//啟動事件
-            Window w = new Window_WPFControls_1();//啟動事件
+            Window w = new Window_WPFControls_2();//啟動事件
             w.Show();
         }
     }

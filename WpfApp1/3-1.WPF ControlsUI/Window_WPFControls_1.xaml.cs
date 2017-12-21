@@ -22,6 +22,13 @@ namespace WpfApp1._3_1.WPF_ControlsUI
         public Window_WPFControls_1()
         {
             InitializeComponent();
+
+            //ApplicationCommands.Close
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
