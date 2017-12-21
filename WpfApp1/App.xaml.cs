@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApp1._3_1.WPF_ControlsUI;
 
 namespace WpfApp1
 {
@@ -37,7 +38,8 @@ namespace WpfApp1
             this.ShutdownMode = ShutdownMode.OnLastWindowClose;//關閉事件
 
             //創建父類別  一個新的視窗
-            Window w = new Window_XAML_Lang2();//啟動事件
+            //Window w = new Window_XAML_Lang2();//啟動事件
+            Window w = new Window_WPFControls_1();//啟動事件
             w.Show();
         }
     }

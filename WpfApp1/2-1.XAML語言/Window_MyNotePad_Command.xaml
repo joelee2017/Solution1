@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.Window_MyNotePad_Command"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window_MyNotePad_Command" Height="300" Width="300">
+    <Grid>
+        <Menu Margin="0,0,0,246">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Cut" Click="MenuItem_Click">
+                    <MenuItem.Background>
+                        <ImageBrush/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Header="Copy" Command="Copy"/>
+                <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
+            </MenuItem>
+            <MenuItem Header="Color">
+                <RadioButton Background="Red" Checked="RadioButton_Checked"/>
+                <RadioButton Background="Lime"/>
+                <RadioButton Background="Blue"/>
+            </MenuItem>
+
+        </Menu>
+        <TextBox Name="TextBox1" HorizontalAlignment="Left" Height="246" Margin="0,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="292"/>
+    </Grid>
+</Window>

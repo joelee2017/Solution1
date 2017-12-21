@@ -33,14 +33,21 @@ namespace WindowsFormsControlLibrary1
             //進入時加顏色並放大
         }
 
-        public string Desc
+        public string Desc //文字 TextBox
         {
             get { return this.textBox1.Text; }
 
             set { this.textBox1.Text = value; }
         }
 
-        public byte[] ImageBytes
+        public string DscCheck //勾選 CheckBox
+        {
+            get { return checkBox1.Enabled.ToString(); }
+
+            set { this.checkBox1.Enabled = true; }
+        }
+
+        public byte[] ImageBytes // 圖片 PictureBox
         { set {
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(value);
                                     this.pictureBox1.Image = Image.FromStream(ms);

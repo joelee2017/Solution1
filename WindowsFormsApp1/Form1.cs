@@ -50,7 +50,6 @@ namespace WindowsFormsApp1
         private void myButton2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.DataBindings.Clear();
-
             List<UserControl1> Uscommtool = new List<UserControl1>();
             UserControl1 us1 = new UserControl1();
             string ADW = Settings.Default.ADVW;
@@ -117,9 +116,9 @@ namespace WindowsFormsApp1
             ptbML.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        private void Ptb_MouseEnter(object sender, EventArgs e)
+        private void Ptb_MouseEnter(object sender, EventArgs e)//圖片寫入容器事件
         {
-            PictureBox ptbME = ((PictureBox)sender);
+            PictureBox ptbME = ((PictureBox)sender);//圖片控制項轉成事件
             ptbME.Size = new Size(150, 200);
             ptbME.BorderStyle = BorderStyle.FixedSingle;
         }
@@ -133,8 +132,9 @@ namespace WindowsFormsApp1
 
             for(int i=0; i<=ProductList.Count-1;i++)
             {
-                MyItemTemplate x = new MyItemTemplate();
+                MyItemTemplate x = new MyItemTemplate();//自製方法宣告
 
+                //
                 x.Desc = ProductList[i].ModifiedDate.ToShortDateString();
                 x.ImageBytes = ProductList[i].LargePhoto;
                 //x.ImageURL=
@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
                 this.flowLayoutPanel1.Controls.Add(y);
 
 
-                Application.DoEvents();//處理完訊息後在傳出
+                Application.DoEvents();//將訊息處理完後在傳出
             }
         }
 

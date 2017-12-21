@@ -64,10 +64,16 @@
     <Compile Include="2-1.XAML語言\Window_XAML_Lang2.xaml.cs">
       <DependentUpon>Window_XAML_Lang2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="2-1.XAML語言\Window_MyNotePad_Command.xaml.cs">
+      <DependentUpon>Window_MyNotePad_Command.xaml</DependentUpon>
+    </Compile>
     <Page Include="1-1.AP架構\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="3-1.WPF ControlsUI\Window_WPFControls_1.xaml.cs">
+      <DependentUpon>Window_WPFControls_1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -85,6 +91,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="2-1.XAML語言\Window_XAML_Lang2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="2-1.XAML語言\Window_MyNotePad_Command.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3-1.WPF ControlsUI\Window_WPFControls_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,7 +130,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="3-1.WPF ControlsUI\" />
     <Folder Include="4-1.WPF應用\" />
   </ItemGroup>
   <ItemGroup>

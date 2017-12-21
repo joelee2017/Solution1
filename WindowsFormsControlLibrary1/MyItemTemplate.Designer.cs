@@ -40,7 +40,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Size = new System.Drawing.Size(111, 68);
@@ -50,16 +50,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 104);
+            this.textBox1.Location = new System.Drawing.Point(16, 104);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 28);
+            this.textBox1.Size = new System.Drawing.Size(111, 19);
             this.textBox1.TabIndex = 1;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(116, 9);
+            this.checkBox1.Location = new System.Drawing.Point(112, 9);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 2;
@@ -74,7 +74,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MyItemTemplate";
-            this.Size = new System.Drawing.Size(148, 142);
+            this.Size = new System.Drawing.Size(142, 130);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

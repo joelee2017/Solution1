@@ -13,5 +13,12 @@ namespace WpfApp_HW
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            this.ShutdownMode = ShutdownMode.OnLastWindowClose;
+
+            Window f = new MainWindow();
+            f.Show();
+        }
     }
 }
