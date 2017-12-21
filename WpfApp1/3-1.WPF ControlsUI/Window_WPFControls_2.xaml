@@ -75,7 +75,7 @@
             <Button Content="Fill"/>
 
         </DockPanel>
-        <Expander Grid.Column="2" Header="ExpanderTool" ExpandDirection="Right" HorizontalAlignment="Left" Height="242" Margin="118,48,0,0" Grid.Row="1" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2">
+        <Expander Grid.Column="2" Header="ExpanderTool" ExpandDirection="Right" HorizontalAlignment="Left" Height="242" Margin="80,48,0,0" Grid.Row="1" VerticalAlignment="Top" Width="251" Grid.ColumnSpan="2">
             <StackPanel Background="Cornsilk">
                 <Button Content="Button" Margin="2"/>
                 <Button Content="Button" Margin="2"/>

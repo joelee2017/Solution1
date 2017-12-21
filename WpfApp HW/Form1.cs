@@ -9,9 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Properties;
 using WindowsFormsControlLibrary1;
 using System.Data.SqlClient;
+using WpfApp_HW.Properties;
+using PhotoDataModel_V2;
 
 namespace WindowsFormsApp1
 {
@@ -30,7 +31,7 @@ namespace WindowsFormsApp1
         ///
         /// </summary>
         AdventureWorksEntities dbContext = new AdventureWorksEntities();
-        private void myButton1_Click(object sender, EventArgs e)
+        private void GetProductPhoto_Click(object sender, EventArgs e)
         {
             var query = from p in dbContext.ProductPhoto
                         select p;
@@ -47,10 +48,9 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void myButton2_Click(object sender, EventArgs e)
+        private void GetphotoADOnet_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.DataBindings.Clear();
-
             List<UserControl1> Uscommtool = new List<UserControl1>();
             UserControl1 us1 = new UserControl1();
             string ADW = Settings.Default.ADVW;
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void myButton3_Click(object sender, EventArgs e)
+        private void btnGetPhotoLINQ_Click(object sender, EventArgs e)
         {
             flowLayoutPanel2.DataBindings.Clear();
             //LINQ
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
                         select ph.LargePhoto;
 
             //Lambda
-            var query1 = dbContext.ProductPhoto.Select(p => p.LargePhoto);
+           // var query1 = dbContext.ProductPhoto.Select(p => p.LargePhoto);
 
             foreach (var s in query)
             {                
@@ -117,14 +117,14 @@ namespace WindowsFormsApp1
             ptbML.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        private void Ptb_MouseEnter(object sender, EventArgs e)
+        private void Ptb_MouseEnter(object sender, EventArgs e)//圖片寫入容器事件
         {
-            PictureBox ptbME = ((PictureBox)sender);
+            PictureBox ptbME = ((PictureBox)sender);//圖片控制項轉成事件
             ptbME.Size = new Size(150, 200);
             ptbME.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        private void myButton4_Click(object sender, EventArgs e)
+        private void btnGetPhoto_Click(object sender, EventArgs e)//匯入圖片
         {
             flowLayoutPanel1.DataBindings.Clear();
             flowLayoutPanel2.DataBindings.Clear();
@@ -133,8 +133,9 @@ namespace WindowsFormsApp1
 
             for(int i=0; i<=ProductList.Count-1;i++)
             {
-                MyItemTemplate x = new MyItemTemplate();
+                MyItemTemplate x = new MyItemTemplate();//自製方法宣告
 
+                //
                 x.Desc = ProductList[i].ModifiedDate.ToShortDateString();
                 x.ImageBytes = ProductList[i].LargePhoto;
                 //x.ImageURL=
@@ -148,7 +149,7 @@ namespace WindowsFormsApp1
                 this.flowLayoutPanel1.Controls.Add(y);
 
 
-                Application.DoEvents();//處理完訊息後在傳出
+                Application.DoEvents();//將訊息處理完後在傳出
             }
         }
 
@@ -159,10 +160,53 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void myButton5_Click(object sender, EventArgs e)
+
+        private void btnRemotePhoto_Click(object sender, EventArgs e)
         {
-            var PhotoList = global::PhotoDataModel_V2.PhotoDataSource.Search();
-            this.dataGridView1.DataSource = PhotoList;
+            flowLayoutPanel1.Controls.Clear();
+            List<PhotoDataItem> PhotoList = global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);
+            
+
+            for (int i = 0; i < PhotoList.Count; i++)
+            {    
+                MyItemTemplate x = new MyItemTemplate();
+                x.Desc = PhotoList[i].Title;
+                x.ImageUrl = PhotoList[i].ImagePath;
+                this.flowLayoutPanel1.Controls.Add(x);
+
+                Application.DoEvents();
+            }
         }
+
+        private void btnAddMyItem_Click(object sender, EventArgs e)//加到最愛
+        {
+            List<ProductPhoto> ProductList = this.dbContext.ProductPhoto.ToList();
+
+            for (int i = 0; i < flowLayoutPanel1.Controls.Count; i++)
+            {
+                MyItemTemplate x = (MyItemTemplate)flowLayoutPanel1.Controls[i];
+                if (x.DscCheck == true)
+                {
+                    x.Desc = ProductList[i].ModifiedDate.ToShortDateString();
+                    x.ImageBytes = ProductList[i].LargePhoto;
+                    this.flowLayoutPanel3.Controls.Add(x);
+                }               
+            }
+        }
+        
+        private void AddMyItem_V2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < flowLayoutPanel1.Controls.Count; i++)
+            {
+                foreach (MyItemTemplate x in flowLayoutPanel1.Controls)
+                
+                if (x.DscCheck == true)
+                {
+                    
+                    this.flowLayoutPanel3.Controls.Add(x);
+                }
+            }
+        }
+
     }
 }

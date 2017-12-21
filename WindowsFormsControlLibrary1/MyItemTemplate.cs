@@ -40,11 +40,11 @@ namespace WindowsFormsControlLibrary1
             set { this.textBox1.Text = value; }
         }
 
-        public string DscCheck //勾選 CheckBox
+        public bool DscCheck //勾選 CheckBox
         {
-            get { return checkBox1.Enabled.ToString(); }
+            get { return checkBox1.Checked; }
 
-            set { this.checkBox1.Enabled = true; }
+            set { this.checkBox1.Checked = true; }
         }
 
         public byte[] ImageBytes // 圖片 PictureBox
@@ -52,6 +52,19 @@ namespace WindowsFormsControlLibrary1
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(value);
                                     this.pictureBox1.Image = Image.FromStream(ms);
               }
+
+        }
+        public string ImageUrl
+        {
+            set
+            {
+                if (value != null)
+                    this.pictureBox1.Load(value);
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

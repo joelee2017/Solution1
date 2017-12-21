@@ -32,11 +32,14 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddMyItem = new WindowsFormsControlLibrary1.MyButton();
+            this.myButton5 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton4 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton3 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton2 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton1 = new WindowsFormsControlLibrary1.MyButton();
-            this.myButton5 = new WindowsFormsControlLibrary1.MyButton();
+            this.AddMyItem_V2 = new WindowsFormsControlLibrary1.MyButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +69,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(250, 118);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(619, 186);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(769, 173);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // flowLayoutPanel2
@@ -74,11 +77,44 @@
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(602, 310);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(831, 311);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 249);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(188, 402);
             this.flowLayoutPanel2.TabIndex = 6;
             this.flowLayoutPanel2.WrapContents = false;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(250, 311);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(564, 401);
+            this.flowLayoutPanel3.TabIndex = 9;
+            // 
+            // btnAddMyItem
+            // 
+            this.btnAddMyItem.FillColor1 = System.Drawing.Color.Red;
+            this.btnAddMyItem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddMyItem.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
+            this.btnAddMyItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMyItem.Location = new System.Drawing.Point(37, 311);
+            this.btnAddMyItem.Name = "btnAddMyItem";
+            this.btnAddMyItem.Size = new System.Drawing.Size(143, 61);
+            this.btnAddMyItem.TabIndex = 10;
+            this.btnAddMyItem.Text = "AddMyItem";
+            this.btnAddMyItem.Click += new System.EventHandler(this.btnAddMyItem_Click);
+            // 
+            // myButton5
+            // 
+            this.myButton5.FillColor1 = System.Drawing.Color.Red;
+            this.myButton5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.myButton5.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
+            this.myButton5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myButton5.Location = new System.Drawing.Point(37, 419);
+            this.myButton5.Name = "myButton5";
+            this.myButton5.Size = new System.Drawing.Size(143, 61);
+            this.myButton5.TabIndex = 8;
+            this.myButton5.Text = "RemotePhoto";
+            this.myButton5.Click += new System.EventHandler(this.btnRemotePhoto_Click);
             // 
             // myButton4
             // 
@@ -86,12 +122,12 @@
             this.myButton4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.myButton4.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
             this.myButton4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myButton4.Location = new System.Drawing.Point(37, 325);
+            this.myButton4.Location = new System.Drawing.Point(37, 237);
             this.myButton4.Name = "myButton4";
-            this.myButton4.Size = new System.Drawing.Size(145, 70);
+            this.myButton4.Size = new System.Drawing.Size(143, 61);
             this.myButton4.TabIndex = 7;
             this.myButton4.Text = "GetPhoto";
-            this.myButton4.Click += new System.EventHandler(this.myButton4_Click);
+            this.myButton4.Click += new System.EventHandler(this.btnGetPhoto_Click);
             // 
             // myButton3
             // 
@@ -99,12 +135,12 @@
             this.myButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.myButton3.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
             this.myButton3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myButton3.Location = new System.Drawing.Point(37, 236);
+            this.myButton3.Location = new System.Drawing.Point(37, 170);
             this.myButton3.Name = "myButton3";
-            this.myButton3.Size = new System.Drawing.Size(145, 70);
+            this.myButton3.Size = new System.Drawing.Size(143, 61);
             this.myButton3.TabIndex = 3;
             this.myButton3.Text = "GetPhotoLINQ";
-            this.myButton3.Click += new System.EventHandler(this.myButton3_Click);
+            this.myButton3.Click += new System.EventHandler(this.btnGetPhotoLINQ_Click);
             // 
             // myButton2
             // 
@@ -112,12 +148,12 @@
             this.myButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.myButton2.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
             this.myButton2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myButton2.Location = new System.Drawing.Point(37, 161);
+            this.myButton2.Location = new System.Drawing.Point(37, 118);
             this.myButton2.Name = "myButton2";
-            this.myButton2.Size = new System.Drawing.Size(145, 55);
+            this.myButton2.Size = new System.Drawing.Size(143, 46);
             this.myButton2.TabIndex = 2;
             this.myButton2.Text = "GetphotoADO.NET";
-            this.myButton2.Click += new System.EventHandler(this.myButton2_Click);
+            this.myButton2.Click += new System.EventHandler(this.GetphotoADOnet_Click);
             // 
             // myButton1
             // 
@@ -127,29 +163,32 @@
             this.myButton1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myButton1.Location = new System.Drawing.Point(37, 34);
             this.myButton1.Name = "myButton1";
-            this.myButton1.Size = new System.Drawing.Size(145, 78);
+            this.myButton1.Size = new System.Drawing.Size(143, 69);
             this.myButton1.TabIndex = 0;
             this.myButton1.Text = "GetProductPhoto";
-            this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
+            this.myButton1.Click += new System.EventHandler(this.GetProductPhoto_Click);
             // 
-            // myButton5
+            // AddMyItem_V2
             // 
-            this.myButton5.FillColor1 = System.Drawing.Color.Red;
-            this.myButton5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.myButton5.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
-            this.myButton5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myButton5.Location = new System.Drawing.Point(37, 412);
-            this.myButton5.Name = "myButton5";
-            this.myButton5.Size = new System.Drawing.Size(145, 70);
-            this.myButton5.TabIndex = 8;
-            this.myButton5.Text = "RemotePhoto";
-            this.myButton5.Click += new System.EventHandler(this.myButton5_Click);
+            this.AddMyItem_V2.FillColor1 = System.Drawing.Color.Red;
+            this.AddMyItem_V2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddMyItem_V2.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
+            this.AddMyItem_V2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMyItem_V2.Location = new System.Drawing.Point(37, 501);
+            this.AddMyItem_V2.Name = "AddMyItem_V2";
+            this.AddMyItem_V2.Size = new System.Drawing.Size(143, 61);
+            this.AddMyItem_V2.TabIndex = 12;
+            this.AddMyItem_V2.Text = "AddMyItem_V2";
+            this.AddMyItem_V2.Click += new System.EventHandler(this.AddMyItem_V2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 586);
+            this.ClientSize = new System.Drawing.Size(1030, 724);
+            this.Controls.Add(this.AddMyItem_V2);
+            this.Controls.Add(this.btnAddMyItem);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.myButton5);
             this.Controls.Add(this.myButton4);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -178,6 +217,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private WindowsFormsControlLibrary1.MyButton myButton4;
         private WindowsFormsControlLibrary1.MyButton myButton5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private WindowsFormsControlLibrary1.MyButton btnAddMyItem;
+        private WindowsFormsControlLibrary1.MyButton AddMyItem_V2;
     }
 }
 

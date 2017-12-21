@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WindowsFormsApp1;
 
 namespace WpfApp_HW
 {
@@ -15,9 +16,9 @@ namespace WpfApp_HW
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            this.ShutdownMode = ShutdownMode.OnLastWindowClose;
 
-            Window f = new MainWindow();
+            Form1 f = new Form1();
+
             f.Show();
         }
     }

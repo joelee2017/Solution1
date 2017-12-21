@@ -36,9 +36,8 @@ namespace WpfApp1._3_1.WPF_ControlsUI
 
         private void stackpanel_Click(object sender, RoutedEventArgs e)
         {
-            this.stackpanel.Orientation = 
-            this.stackpanel.Orientation == Orientation.Horizontal ? 
-                                        Orientation.Vertical : Orientation.Horizontal;
+            this.stackpanel.Orientation =  this.stackpanel.Orientation == Orientation.Horizontal ? 
+                                                         Orientation.Vertical : Orientation.Horizontal;
         }
     }
 }

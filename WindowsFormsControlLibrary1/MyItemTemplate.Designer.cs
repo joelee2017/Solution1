@@ -64,6 +64,7 @@
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // MyItemTemplate
             // 
@@ -84,8 +85,8 @@
         #endregion
 
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        internal System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.CheckBox checkBox1;
     }
 }
