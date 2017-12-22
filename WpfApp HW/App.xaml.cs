@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using WindowsFormsApp1;
+using WpfApp_HW;
+using WpfApp1;
 
 namespace WpfApp_HW
 {
@@ -17,7 +19,10 @@ namespace WpfApp_HW
         protected override void OnStartup(StartupEventArgs e)
         {
 
-            Form1 f = new Form1();
+
+            Window f = new Window_MyNotePad_Command();
+            //Window f = new MainWindow();
+            //Form1 f = new Form1();
 
             f.Show();
         }

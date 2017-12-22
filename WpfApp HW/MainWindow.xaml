@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:WpfApp_HW"
         mc:Ignorable="d"
         Title="MainWindow" Height="361.529" Width="706.177">
-    <Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="-118,120,0,0" VerticalAlignment="Top" Width="100"/>
-
+    <Grid Margin="0,0,-8,-31">
+        <Canvas Margin="30,47,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

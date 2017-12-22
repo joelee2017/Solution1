@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1._3_1.WPF_ControlsUI.Window_MetroUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1._3_1.WPF_ControlsUI"
+        mc:Ignorable="d"
+        Title="Window_MetroUI" Height="300" Width="300">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Visible">
+            <StackPanel Name="stackPanel" Orientation="Horizontal">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF8205"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+</Window>

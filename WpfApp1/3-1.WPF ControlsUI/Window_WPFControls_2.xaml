@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1._3_1.WPF_ControlsUI"
         mc:Ignorable="d"
-        Title="Window_WPFControls_2" Height="487.864" Width="618.204">
+        Title="Window_WPFControls_2" Height="494.864" Width="856.204">
     <Grid Name="Grid1" ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="21*"/>
@@ -58,16 +58,18 @@
             <Button Content="Button"/>
             <Button Content="Button"/>
         </StackPanel>
-        <WrapPanel Grid.Column="2" HorizontalAlignment="Left" Height="75" Margin="13,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Grid.ColumnSpan="2">
-            <Button Content="Button" Width="75"/>
-            <Button Content="Button" Width="75"/>
-            <Button Content="Button" Width="75"/>
-            <Button Content="Button" Width="75"/>
-            <Button Content="Button" Width="75"/>
-            <Button Content="Button" Width="75"/>
-            <Button Content="Button" Width="75"/>
-        </WrapPanel>
-        <DockPanel Grid.Column="1" HorizontalAlignment="Left" Height="110" LastChildFill="False" Margin="114,202,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Grid.ColumnSpan="3">
+        <ScrollViewer Background="AliceBlue" Grid.Column="1" HorizontalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="75" Margin="184,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Grid.ColumnSpan="2">
+            <WrapPanel Height="75" Width="198">
+                <Button Content="Button" Width="75"/>
+                <Button Content="Button" Width="75"/>
+                <Button Content="Button" Width="75"/>
+                <Button Content="Button" Width="75"/>
+                <Button Content="Button" Width="75"/>
+                <Button Content="Button" Width="75"/>
+                <Button Content="Button" Width="75"/>
+            </WrapPanel>
+        </ScrollViewer>
+        <DockPanel Grid.Column="2" HorizontalAlignment="Left" Height="110" LastChildFill="False" Margin="10,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188">
             <Button Content="Top" DockPanel.Dock="Top"/>
             <Button Content="Bottom" DockPanel.Dock="Bottom"/>
             <Button Content="Right" DockPanel.Dock="Right"/>
@@ -75,7 +77,7 @@
             <Button Content="Fill"/>
 
         </DockPanel>
-        <Expander Grid.Column="2" Header="ExpanderTool" ExpandDirection="Right" HorizontalAlignment="Left" Height="242" Margin="80,48,0,0" Grid.Row="1" VerticalAlignment="Top" Width="251" Grid.ColumnSpan="2">
+        <Expander Grid.Column="2" Header="ExpanderTool" ExpandDirection="Right" HorizontalAlignment="Left" Height="242" Margin="118,41,-28,0" Grid.Row="1" VerticalAlignment="Top" Width="251" Grid.ColumnSpan="2">
             <StackPanel Background="Cornsilk">
                 <Button Content="Button" Margin="2"/>
                 <Button Content="Button" Margin="2"/>

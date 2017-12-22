@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApplication1.Window_圖形轉換"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window_圖形轉換" Height="522" Width="506">
+    <Grid Name="Grid1" ShowGridLines="True" Background="AliceBlue" Height="460" Width="434">
+       
+        <Rectangle Width="100" Height="100" Name="rectangle1"  >
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="White" Offset="0"></GradientStop>
+                    <GradientStop Color="Blue" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+                <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <!--<ScaleTransform ScaleX="2" ScaleY="2"></ScaleTransform>-->
+                    <!--<RotateTransform Angle="55" CenterX="0" CenterY="0" x:Name="Rotate1"></RotateTransform>-->
+                    <TranslateTransform  Y="50" X="50"></TranslateTransform>
+                 
+                  
+                    <!--表示 2D 傾斜。-->
+                    <!--<SkewTransform CenterX="0" CenterY="0" AngleX="20" AngleY="60"  x:Name="Skew1"></SkewTransform>-->
+                    
+                    <!--如果 AngleX , AngleY 加起來 90 度 就不見-->
+                    <!--<SkewTransform CenterX="0" CenterY="0" AngleX="50" AngleY="40" ></SkewTransform>-->
+                    <!--<SkewTransform CenterX="0" CenterY="0"  AngleX="70" ></SkewTransform>-->
+                    <!--<SkewTransform CenterX="0" CenterY="0"  AngleY="30" ></SkewTransform>-->
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Triggers>
+
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard >
+
+                            <DoubleAnimation Storyboard.TargetName="Skew1" Storyboard.TargetProperty="AngleX" From="0" To="90" RepeatBehavior="Forever" Duration="0:0:6">
+                                
+                            </DoubleAnimation>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+
+            </Rectangle.Triggers>
+        </Rectangle>
+        <Button Height="32" Margin="105,0,84,91" Name="button1" VerticalAlignment="Bottom" Click="button1_Click">transform</Button>
+        <Image Margin="139,32,154,318" Source="/WpfApplication1;component/Images/bananas.jpg" Stretch="UniformToFill" >
+            <Image.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="428,152,-135,198" Source="/WpfApplication1;component/Images/bananas.jpg" Stretch="UniformToFill" >
+            <Image.RenderTransform>
+                <ScaleTransform ScaleX="-1" ScaleY="-1"></ScaleTransform>
+            </Image.RenderTransform>
+        </Image>
+        
+        
+    </Grid>
+</Window>

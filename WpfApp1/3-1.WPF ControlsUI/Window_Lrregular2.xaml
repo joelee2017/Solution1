@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1._3_1.WPF_ControlsUI.Window_Lrregular2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1._3_1.WPF_ControlsUI"
+        mc:Ignorable="d"
+        Title="Window_Lrregular2" Height="310.219" Width="405.839"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterOwner"
+        Cursor="Hand"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        >
+    <Grid>
+        <Image Margin="80,28,94,26" Source="F:\MSIT11730305\8-1.WPF\Solution1\WpfApp1\圖庫\ggg.jpg" Stretch="Fill" />
+
+
+
+
+    </Grid>
+</Window>

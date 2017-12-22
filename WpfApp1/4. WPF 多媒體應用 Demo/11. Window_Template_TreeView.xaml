@@ -1,0 +1,52 @@
+﻿<Window x:Class="Demo.Window_Template_TreeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="TreeView Explorer" Width="850" Height="400"
+    WindowStartupLocation="CenterScreen"
+  
+    >
+  <Grid>
+    <Grid.Resources>
+      <ImageBrush x:Key="WorldMapBrush" ImageSource="..\Images\worldmap.png" />
+    </Grid.Resources>
+
+    <Grid.RowDefinitions>
+      <!-- Top row is for the TreeView. -->
+      <RowDefinition Height="auto" />
+      <!-- Bottom row is for the web page. -->
+      <RowDefinition  />
+    </Grid.RowDefinitions>
+
+    <TreeView Name="tree" >
+            <TreeView.Resources>
+                <ResourceDictionary Source="Dictionary_GroupedTreeViewItemStyle.xaml" />
+            </TreeView.Resources>
+            <!-- Arrange the root items horizontally. -->
+      <TreeView.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel 
+            IsItemsHost="True" 
+            Orientation="Horizontal" />
+        </ItemsPanelTemplate>
+      </TreeView.ItemsPanel>
+        <TreeViewItem Header="USA" IsExpanded="True">
+            <TreeViewItem Header="California" IsExpanded="True">
+                <TreeViewItem Header="Los Angeles"></TreeViewItem>
+                <TreeViewItem Header="San Diego"></TreeViewItem>
+            </TreeViewItem>
+        </TreeViewItem>
+        <TreeViewItem Header="Germany">
+            <TreeViewItem Header="North">
+                <TreeViewItem Header="Berlin"></TreeViewItem>
+                <TreeViewItem Header="Hamburg"></TreeViewItem>
+            </TreeViewItem>
+        </TreeViewItem>
+        </TreeView>
+
+    <!-- Displays the selected web page. -->
+    <Frame Name="webPageFrame"
+      Background="{StaticResource WorldMapBrush}"
+      Grid.Row="1"
+      LoadCompleted="OnWebPageFrameLoadCompleted"  SnapsToDevicePixels="True" />
+  </Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApplication1.Window_2D_動畫_使用_Path_3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window_Window_2D_動畫_使用_Path_2" Height="331" Width="417">
+    
+
+        <Canvas >
+          
+            <Path x:Name="path1" Stroke="Blue" Height="168"  Width="249">
+                <Path.Data>
+                    <EllipseGeometry x:Name="EllipseGemetry1" Center="140 100" RadiusX="100" RadiusY="60" />
+                </Path.Data>
+            </Path>
+
+            <Ellipse Margin="57,69,0,0" Name="ellipse1" Stroke="Black" Fill="Blue" Height="44" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48">
+
+                <!--<Ellipse Margin="57,69,0,0" Name="ellipse1" Stroke="Black" Height="44" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Fill="Red">-->
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-80" Y="-90" />
+                        <MatrixTransform x:Name="mt1" />
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+
+
+                <Ellipse.Triggers>
+                    <EventTrigger RoutedEvent="Page.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever" x:Name="Storyboard_1">
+                                <MatrixAnimationUsingPath x:Name="MatrixAnimationUsingPath_1"
+                                    Storyboard.TargetName="mt1"
+                                    Storyboard.TargetProperty="Matrix"
+                                                          
+                                    Duration="0:0:4"
+                                   
+                                    >
+
+                                </MatrixAnimationUsingPath>
+
+
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Ellipse.Triggers>
+
+            </Ellipse>
+
+        
+        <Button Canvas.Left="161" Canvas.Top="15" Height="23" Name="Button1" Width="111" Click="Button_Click">Start Animation</Button>
+    </Canvas>
+ 
+</Window>

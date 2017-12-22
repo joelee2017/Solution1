@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfApplication1.Digit_Clock_2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Digit_Clock_2" Width="401" Height="189" 
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" BorderBrush="#FF000000"
+        >
+    <Grid Background="#FF000000">
+
+        <Grid x:Name="LayoutRoot" Background="{x:Null}" Margin="0,9,1,75.273" d:LayoutOverrides="Height">
+            <TextBlock Margin="8,0,0,0" Foreground="#FFFFFFFF" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="72" Text="00" d:LayoutOverrides="HorizontalAlignment, Height" VerticalAlignment="Center" x:Name="hourText"/>
+            <TextBlock Margin="103.547,0,0,0" Foreground="#FFFFFFFF" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left" d:LayoutOverrides="Width, Height" VerticalAlignment="Center"><Run Text=":"/></TextBlock>
+            <TextBlock Margin="0,0,145.453,0" Foreground="#FFFFFFFF" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Right" Text="00" d:LayoutOverrides="HorizontalAlignment, Width, Height" VerticalAlignment="Center" x:Name="minuteText"/>
+            <TextBlock Margin="0,0,108,0" Foreground="#FFFFFFFF" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Right" d:LayoutOverrides="Width, Height" VerticalAlignment="Center"><Run Text=":"/></TextBlock>
+            <TextBlock Margin="0,0,15.547,0" Foreground="#FFFFFFFF" TextWrapping="Wrap" FontSize="72" Text="00" HorizontalAlignment="Right" d:LayoutOverrides="Width, Height" VerticalAlignment="Center" x:Name="secondText"/>
+        </Grid>
+        <Grid x:Name="LayoutRootShadow" Background="{x:Null}" Margin="0,70,1,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Visibility="Visible" d:LayoutOverrides="Height">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="72" Text="00" d:LayoutOverrides="HorizontalAlignment, Height" VerticalAlignment="Center" x:Name="hourText1" Opacity="0.7">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF000000" Offset="0"/>
+						<GradientStop Color="#FFFFFFFF" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+            <TextBlock Margin="103.547,0,0,0" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left" d:LayoutOverrides="Width, Height" VerticalAlignment="Center" Opacity="0.7"><TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF000000" Offset="0"/>
+						<GradientStop Color="#FFFFFFFF" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground><Run Text=":"/></TextBlock>
+            <TextBlock Margin="0,0,145.453,0" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Right" Text="00" d:LayoutOverrides="HorizontalAlignment, Width, Height" VerticalAlignment="Center" x:Name="minuteText1" Opacity="0.7">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF000000" Offset="0"/>
+						<GradientStop Color="#FFFFFFFF" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+            <TextBlock Margin="0,0,108,0" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Right" d:LayoutOverrides="Width, Height" VerticalAlignment="Center" Opacity="0.7"><TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF000000" Offset="0"/>
+						<GradientStop Color="#FFFFFFFF" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground><Run Text=":"/></TextBlock>
+            <TextBlock Margin="0,0,15.547,0" TextWrapping="Wrap" FontSize="72" Text="00" HorizontalAlignment="Right" d:LayoutOverrides="Width, Height" VerticalAlignment="Center" x:Name="secondText1" Opacity="0.7">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF000000" Offset="0"/>
+						<GradientStop Color="#FFFFFFFF" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>

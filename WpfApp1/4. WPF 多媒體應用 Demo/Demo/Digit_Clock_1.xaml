@@ -1,0 +1,189 @@
+﻿<Window x:Class="WpfApplication1.Digit_Clock_1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window3" Height="300" Width="300">
+
+    <Canvas
+    Canvas.Left="10" Canvas.Top="10" Loaded="OnLoad" x:Name="Main">
+        <Canvas x:Name="DigitalClock" >
+            <!-- Background-->
+            <Rectangle Height="300" Width="820" Stroke="Red" StrokeThickness="1" Fill="Black"></Rectangle>
+            <!-- Hour1 -->
+            <!-- Left-->
+            <Polygon Points="15 30, 15 80, 17 78, 17 32" x:Name="Hour1TopLeft"    
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Top-->
+            <Polygon Points="28 18, 90 18, 88 20, 30 20" x:Name="Hour1Top"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Right-->
+            <Polygon Points="103 30, 103 80, 101 78, 101 32" x:Name="Hour1TopRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Center Line-->
+            <Polygon Points="22 98,28 102,90 102,96 98, 90 92, 28 92" x:Name="Hour1Center"
+        Stroke="Red" StrokeThickness="15" Fill="Red"/>
+            <!-- Bottom Left-->
+            <Polygon Points="14 115, 15 168, 17 166, 17 117" x:Name="Hour1BottomLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Bottom Right-->
+            <Polygon Points="102 115, 102 168, 101 167, 99 117" x:Name="Hour1BottomRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!--  Bottom-->
+            <Polygon Points="30 179, 88 179, 90 181, 28 181" x:Name="Hour1Bottom"
+        Stroke="Red" StrokeThickness="15" />
+            <!-- Hour 2-->
+            <!-- Left-->
+            <Polygon Points="125 30, 125 80, 127 78, 127 32" x:Name="Hour2TopLeft"
+    Stroke="Red" StrokeThickness="15" />
+            <!-- Top-->
+            <Polygon Points="138 18, 200 18, 198 20, 140 20" x:Name="Hour2Top"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Right-->
+            <Polygon Points="213 30, 213 80, 211 78, 211 32" x:Name="Hour2TopRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Center Line-->
+            <Polygon Points="132 98,138 102,200 102,206 98, 200 92, 138 92" x:Name="Hour2Center"
+        Stroke="Red" StrokeThickness="15" Fill="Red"/>
+            <!-- Bottom Left-->
+            <Polygon Points="124 115, 125 168, 127 166, 127 117" x:Name="Hour2BottomLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Bottom Right-->
+            <Polygon Points="212 115, 212 168, 211 167, 209 117" x:Name="Hour2BottomRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!--  Bottom-->
+            <Polygon Points="140 179, 198 179, 200 181, 138 181" x:Name="Hour2Bottom"
+        Stroke="Red" StrokeThickness="15" />
+            <!-- Two Dots-->
+            <Rectangle Height="20" Width="20" Canvas.Left="250" Canvas.Top="50"  Stroke="Red" StrokeThickness="1" Fill="Red"></Rectangle>
+            <Rectangle Height="20" Width="20" Canvas.Left="250" Canvas.Top="130"  Stroke="Red" StrokeThickness="1" Fill="Red"></Rectangle>
+            <!-- Min1-->
+            <!-- Left-->
+            <Polygon Points="305 30, 305 80, 307 78, 307 32" x:Name="Min1TopLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Top-->
+            <Polygon Points="318 18, 380 18, 378 20, 320 20" x:Name="Min1Top"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Right-->
+            <Polygon Points="393 30, 393 80, 391 78, 391 32" x:Name="Min1TopRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Center Line-->
+            <Polygon Points="312 98,318 102,380 102,386 98, 380 92, 318 92" x:Name="Min1Center"
+        Stroke="Red" StrokeThickness="15" Fill="Red"/>
+            <!-- Bottom Left-->
+            <Polygon Points="304 115, 305 168, 307 166, 307 117" x:Name="Min1BottomLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Bottom Right-->
+            <Polygon Points="392 115, 392 168, 391 167, 389 117" x:Name="Min1BottomRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!--  Bottom-->
+            <Polygon Points="320 179, 378 179, 380 181, 318 181" x:Name="Min1Bottom"
+        Stroke="Red" StrokeThickness="15" />
+            <!-- Min2-->
+            <!-- Left-->
+            <Polygon Points="415 30, 415 80, 417 78, 417 32" x:Name="Min2TopLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Top-->
+            <Polygon Points="428 18, 490 18, 488 20, 430 20" x:Name="Min2Top"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Right-->
+            <Polygon Points="503 30, 503 80, 501 78, 501 32" x:Name="Min2TopRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Center Line-->
+            <Polygon Points="422 98,428 102,490 102,496 98, 490 92, 428 92" x:Name="Min2Center"
+        Stroke="Red" StrokeThickness="15" Fill="Red"/>
+            <!-- Bottom Left-->
+            <Polygon Points="414 115, 415 168, 417 166, 417 117" x:Name="Min2BottomLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Bottom Right-->
+            <Polygon Points="502 115, 502 168, 501 167, 499 117" x:Name="Min2BottomRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!--  Bottom-->
+            <Polygon Points="430 179, 488 179, 490 181, 428 181" x:Name="Min2Bottom"
+        Stroke="Red" StrokeThickness="15" />
+            <!-- Two Dots-->
+            <Rectangle Height="20" Width="20" Canvas.Left="540" Canvas.Top="50"  Stroke="Red" StrokeThickness="1" Fill="Red"></Rectangle>
+            <Rectangle Height="20" Width="20" Canvas.Left="540" Canvas.Top="130"  Stroke="Red" StrokeThickness="1" Fill="Red"></Rectangle>
+            <!-- Sec1-->
+            <!-- Left-->
+            <Polygon Points="595 30, 595 80, 597 78, 597 32" x:Name="Sec1TopLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Top-->
+            <Polygon Points="608 18, 670 18, 668 20, 610 20" x:Name="Sec1Top"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Right-->
+            <Polygon Points="683 30, 683 80, 681 78, 681 32" x:Name="Sec1TopRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Center Line-->
+            <Polygon Points="602 98,608 102,670 102,676 98, 670 92, 608 92" x:Name="Sec1Center"
+        Stroke="Red" StrokeThickness="15" Fill="Red"/>
+            <!-- Bottom Left-->
+            <Polygon Points="594 115, 595 168, 597 166, 597 117" x:Name="Sec1BottomLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Bottom Right-->
+            <Polygon Points="682 115, 682 168, 681 167, 679 117" x:Name="Sec1BottomRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!--  Bottom-->
+            <Polygon Points="610 179, 668 179, 670 181, 608 181" x:Name="Sec1Bottom"
+        Stroke="Red" StrokeThickness="15" />
+            <!-- Sec2-->
+            <!-- Left-->
+            <Polygon Points="715 30, 715 80, 717 78, 717 32" x:Name="Sec2TopLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Top-->
+            <Polygon Points="728 18, 790 18, 788 20, 730 20" x:Name="Sec2Top"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Right-->
+            <Polygon Points="803 30, 803 80, 801 78, 801 32" x:Name="Sec2TopRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Center Line-->
+            <Polygon Points="722 98,728 102,790 102,796 98, 790 92, 728 92" x:Name="Sec2Center"
+        Stroke="Red" StrokeThickness="15" Fill="Red"/>
+            <!-- Bottom Left-->
+            <Polygon Points="714 115, 715 168, 717 166, 717 117" x:Name="Sec2BottomLeft"
+      Stroke="Red" StrokeThickness="15" />
+            <!-- Bottom Right-->
+            <Polygon Points="802 115, 802 168, 801 167, 799 117" x:Name="Sec2BottomRight"
+      Stroke="Red" StrokeThickness="15" />
+            <!--  Bottom-->
+            <Polygon Points="730 179, 788 179, 790 181, 728 181" x:Name="Sec2Bottom"
+        Stroke="Red" StrokeThickness="15" />
+        </Canvas>
+        <Canvas Canvas.Left="620" Canvas.Top="180">
+            <!-- A-->
+            <Canvas Canvas.Left="10" Canvas.Top="10">
+                <Polyline Points="10 100,35 20,60 100"
+          Stroke="Blue" StrokeThickness="4"/>
+                <Polyline Points="24 60,48 60"
+          Stroke="Blue" StrokeThickness="4"/>
+            </Canvas>
+            <!--N-->
+            <Canvas Canvas.Left="70" Canvas.Top="40">
+                <Polyline Points="10 30,10 70"
+          Stroke="Blue" StrokeThickness="4"/>
+                <Polyline Points="30 30,30 70"
+          Stroke="Blue" StrokeThickness="4"/>
+                <Polyline Points="10 30,30 70"
+          Stroke="Blue" StrokeThickness="4"/>
+            </Canvas>
+            <Canvas Canvas.Left="95" Canvas.Top="10">
+                <Polyline Points="10 100,23 60,40 100"
+          Stroke="Blue" StrokeThickness="4"/>
+                <Polyline Points="15 80,33 80"
+          Stroke="Blue" StrokeThickness="4"/>
+            </Canvas>
+            <!--N-->
+            <Canvas Canvas.Left="130" Canvas.Top="40">
+                <Polyline Points="10 30,10 70"
+          Stroke="Blue" StrokeThickness="4"/>
+                <Polyline Points="30 30,30 70"
+          Stroke="Blue" StrokeThickness="4"/>
+                <Polyline Points="10 30,30 70"
+          Stroke="Blue" StrokeThickness="4"/>
+            </Canvas>
+            <!--D-->
+            <Canvas Canvas.Left="148" Canvas.Top="40">
+                <Path Data="M 20,32 C 52 63,25 67, 20 70z"
+            Stroke="Blue" StrokeThickness="4"/>
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</Window>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApplication__MyHomework_.TestControl.Window_TextBlock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window_TextBlock" Height="458" Width="552">
+    <Grid Name="Grid1" >
+        <Button Content="flicker" Height="23" HorizontalAlignment="Left" Margin="135,135,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <ScrollViewer  Name="ScrollViewer1" Height="84" Width="436" Margin="55,12,39,322">
+            <Border BorderBrush="Red"  BorderThickness="4">
+                       <TextBlock  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible"   Name="textBlock1" Text="1111111111" >
+                    <TextBlock.TextEffects>
+                        <TextEffect Foreground="#84190000" PositionCount="5" />
+                    </TextBlock.TextEffects>
+             </TextBlock>
+    
+            </Border>
+        </ScrollViewer>
+         <Button Content="inlines" Height="23" HorizontalAlignment="Right" Margin="0,135,182,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <TextBlock Height="47" HorizontalAlignment="Left" Margin="55,205,0,0" Name="textBlock2" Text="        TextBlock" VerticalAlignment="Top" Width="436" FontSize="26" FontWeight="Bold" FontStyle="Italic" TextAlignment="Left" Opacity="1" FontStretch="UltraExpanded" FlowDirection="LeftToRight">
+             可將目標紋理變柔邊的點陣圖效果。
+            <TextBlock.Effect>
+               <BlurEffect ></BlurEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Foreground="Orange" Height="41" HorizontalAlignment="Left" Margin="33,258,0,0" Name="textBlock3" Text="        TextBlock" VerticalAlignment="Top" Width="497" FontSize="26" FontWeight="Bold" FontStyle="Italic" TextAlignment="Left" Opacity="1" FontStretch="UltraExpanded" FlowDirection="LeftToRight">
+             在目標紋理四周繪製延伸陰影的點陣圖效果。 
+            <TextBlock.Effect>
+               <DropShadowEffect  Opacity="0.5"  ShadowDepth="6" BlurRadius="3"></DropShadowEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="W" VerticalAlignment="Bottom" FontSize="48"
+							FontWeight="Bold" FontFamily="Arial Black" Margin="114,0,150,45"
+							Foreground="White">
+						<TextBlock.Effect>
+							<DropShadowEffect ShadowDepth="3" BlurRadius="2" Opacity="0.5"  />
+						</TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="240,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="223">
+            xxxxx<Run Foreground="Red" >111111</Run> dkdwelk<Run ForceCursor="True"></Run>
+        </TextBlock>
+    </Grid>
+</Window>

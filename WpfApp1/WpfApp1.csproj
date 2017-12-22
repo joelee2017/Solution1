@@ -13,6 +13,21 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +49,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DataModel\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -49,6 +70,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPFMitsuControls">
+      <HintPath>..\shared\WPFMitsuControls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -71,11 +95,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="3-1.WPF ControlsUI\UserControl_Page.xaml.cs">
+      <DependentUpon>UserControl_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3-1.WPF ControlsUI\Window_Lrregular.xaml.cs">
+      <DependentUpon>Window_Lrregular.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3-1.WPF ControlsUI\Window_Lrregular2.xaml.cs">
+      <DependentUpon>Window_Lrregular2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3-1.WPF ControlsUI\Window_MetroUI.xaml.cs">
+      <DependentUpon>Window_MetroUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3-1.WPF ControlsUI\Window_MyBook.xaml.cs">
+      <DependentUpon>Window_MyBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3-1.WPF ControlsUI\Window_ViewBox.xaml.cs">
+      <DependentUpon>Window_ViewBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="3-1.WPF ControlsUI\Window_WPFControls_1.xaml.cs">
       <DependentUpon>Window_WPFControls_1.xaml</DependentUpon>
     </Compile>
     <Compile Include="3-1.WPF ControlsUI\Window_WPFControls_2.xaml.cs">
       <DependentUpon>Window_WPFControls_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3. WPF Controls UI Demo\Window_Slider.xaml.cs">
+      <DependentUpon>Window_Slider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3. WPF Controls UI Demo\Window_TextBlock.xaml.cs">
+      <DependentUpon>Window_TextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3. WPF Controls UI Demo\Window_Viewbox.xaml.cs">
+      <DependentUpon>Window_Viewbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_XXXBruch.xaml.cs">
+      <DependentUpon>Window_XXXBruch.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -101,11 +155,51 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="3-1.WPF ControlsUI\UserControl_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3-1.WPF ControlsUI\Window_Lrregular.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3-1.WPF ControlsUI\Window_Lrregular2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3-1.WPF ControlsUI\Window_MetroUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3-1.WPF ControlsUI\Window_MyBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3-1.WPF ControlsUI\Window_ViewBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="3-1.WPF ControlsUI\Window_WPFControls_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="3-1.WPF ControlsUI\Window_WPFControls_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3. WPF Controls UI Demo\Window_Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="3. WPF Controls UI Demo\Window_TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="3. WPF Controls UI Demo\Window_Viewbox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_XXXBruch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,9 +230,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="4-1.WPF應用\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="圖庫\139-16122Q60053.jpg" />
     <Resource Include="圖庫\1483416288976.jpg" />
@@ -178,6 +270,31 @@
     <Resource Include="圖庫\img_1106040.jpg" />
     <Resource Include="圖庫\uAa4u9F.jpg" />
     <Resource Include="圖庫\下載.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DBDataModel.csproj">
+      <Project>{1d102c7c-b8b1-4cef-be1b-5dde4fbe24be}</Project>
+      <Name>DBDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\shared\PhotoDataSource\PhotoDataModel.csproj">
+      <Project>{6fff6dd7-16a6-4ca7-9186-e6042a9fdfbe}</Project>
+      <Name>PhotoDataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="圖庫\ggg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -161,27 +161,24 @@ namespace WindowsFormsApp1
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        private void btnRemotePhoto_Click(object sender, EventArgs e)
+        private void btnRemotePhoto_Click(object sender, EventArgs e)//網頁照片匯入
         {
             flowLayoutPanel1.Controls.Clear();
-            List<PhotoDataItem> PhotoList = global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);
-            
-
+            List<PhotoDataItem> PhotoList = global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);            
             for (int i = 0; i < PhotoList.Count; i++)
             {    
                 MyItemTemplate x = new MyItemTemplate();
                 x.Desc = PhotoList[i].Title;
                 x.ImageUrl = PhotoList[i].ImagePath;
                 this.flowLayoutPanel1.Controls.Add(x);
-
                 Application.DoEvents();
             }
         }
 
         private void btnAddMyItem_Click(object sender, EventArgs e)//加到最愛
         {
-            List<ProductPhoto> ProductList = this.dbContext.ProductPhoto.ToList();
 
+            List<ProductPhoto> ProductList = this.dbContext.ProductPhoto.ToList();
             for (int i = 0; i < flowLayoutPanel1.Controls.Count; i++)
             {
                 MyItemTemplate x = (MyItemTemplate)flowLayoutPanel1.Controls[i];
@@ -196,14 +193,15 @@ namespace WindowsFormsApp1
         
         private void AddMyItem_V2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < flowLayoutPanel1.Controls.Count; i++)
+            for (int i = 0; i < flowLayoutPanel1.Controls.Count +1; i++)
             {
+                //List<MyItemTemplate> s = new List<MyItemTemplate>();
                 foreach (MyItemTemplate x in flowLayoutPanel1.Controls)
-                
-                if (x.DscCheck == true)
                 {
-                    
-                    this.flowLayoutPanel3.Controls.Add(x);
+                    if (x.DscCheck == true)
+                    {
+                        this.flowLayoutPanel3.Controls.Add(x);
+                    }
                 }
             }
         }

@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApplication1.Window_2D"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window_2D" Height="278" Width="301">
+    <!--<Viewbox>-->
+        <!--用 canvas 較好移動座標-->
+        <Canvas  >
+        <Ellipse Canvas.Left="12"  Height="243" Name="Ellipse1" Stroke="Black" Width="237"  Fill="Yellow" StrokeThickness="3" Canvas.Top="10" />
+        <Ellipse Fill="black" Canvas.Left="68" Canvas.Top="69" Height="34" Name="Ellipse2" Stroke="Black" Width="27" />
+        <Ellipse Canvas.Left="121" Canvas.Top="69" Fill="Black" Height="34" Name="Ellipse3" Stroke="Black" Width="24" />
+        <Path  Fill="Red" StrokeThickness="1"  Stroke="Red"  Canvas.Left="68" Canvas.Top="166" Height="50" Width="100">
+            <!--直線-->
+            <!--<Path.Data>
+                M 0,0 L 50,50 100,0 
+            </Path.Data>-->
+
+            <!--二次方貝茲曲線-會繪製從 (0,0) 到 (100,0) 的二次方貝茲曲線。曲線具有控制點 50,50。-->
+            <Path.Data>
+                M 0,0 q 50,90 100,0
+            </Path.Data>
+
+            <!--，會繪製從 (10, 100) 到 (300, 100) 的三次方貝茲曲線。曲線具有控制點 (100, 0) 和 (200, 200)。-->
+        </Path>
+        <Path Stroke="Black" StrokeThickness="1"  
+                   Data="M 10,100 C 100,0 200,200 300,100" />
+ 
+    </Canvas>
+  <!--</Viewbox>-->
+  
+    <!--<Canvas Width="100" Height="100">
+        <Ellipse Fill="Yellow" Stroke="Black"
+     StrokeThickness="7"
+     Width="100" Height="100" />
+
+        <Ellipse Fill="Black"
+     Width="10" Height="15"
+     Canvas.Left="28" Canvas.Top="28" />
+
+        <Ellipse Fill="Black" x:Name="myEllipse"
+     Width="10" Height="15"
+     Canvas.Left="62" Canvas.Top="28" />
+
+        <Path Stroke="Black"
+     StrokeThickness="6"
+     Data="M 30,60 Q 50,90 70,60" />
+    </Canvas>-->
+
+</Window>
