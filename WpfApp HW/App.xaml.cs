@@ -20,9 +20,9 @@ namespace WpfApp_HW
         {
 
 
-            Window f = new Window_MyNotePad_Command();
+            //Window f = new Window_MyNotePad_Command();
             //Window f = new MainWindow();
-            //Form1 f = new Form1();
+            Form1 f = new Form1();
 
             f.Show();
         }

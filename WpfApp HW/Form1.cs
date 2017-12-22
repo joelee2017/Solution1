@@ -160,19 +160,35 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-
-        private void btnRemotePhoto_Click(object sender, EventArgs e)//網頁照片匯入
+        async private void btnRemotePhoto_Click(object sender, EventArgs e)//網頁照片匯入
         {
             flowLayoutPanel1.Controls.Clear();
-            List<PhotoDataItem> PhotoList = global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);            
+            //List<PhotoDataItem> PhotoList =  global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);
+            List<PhotoDataItem> PhotoList = await PhotoDataSource.SearchAsync("car", 5);
             for (int i = 0; i < PhotoList.Count; i++)
             {    
                 MyItemTemplate x = new MyItemTemplate();
                 x.Desc = PhotoList[i].Title;
                 x.ImageUrl = PhotoList[i].ImagePath;
-                this.flowLayoutPanel1.Controls.Add(x);
+
+                if(PhotoList[i].UniqueId !=null)
+                {
+                    x.Id = PhotoList[i].UniqueId;
+                }
+                 else
+                {
+                    x.Id = Guid.NewGuid().ToString();
+                
+                    x.NotifyMyFavor += X_NotifyMyFavor;
+                    this.flowLayoutPanel1.Controls.Add(x);
+                }
                 Application.DoEvents();
             }
+        }
+
+        private void X_NotifyMyFavor(object sender, bool IsFavor)
+        {
+            this.Text = DateTime.Now.ToLongDateString();
         }
 
         private void btnAddMyItem_Click(object sender, EventArgs e)//加到最愛
@@ -204,7 +220,33 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+
+
         }
 
+        private void NotifyMyFavor(object sender, bool IsFavor)
+        {
+            var item = (MyItemTemplate)sender;
+            string itemID = item.Id;
+            PictureBox x = new PictureBox
+            {
+                Image = item.Ptimage,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Tag = item.Id,
+                Name = item.Id
+            };
+
+            if (IsFavor)
+            {
+                this.flowLayoutPanel1.Controls.Add(x);
+            }
+            else
+            {
+                var removeItem = this.flowLayoutPanel3.Controls.Find(itemID.ToString(), true)[0];
+
+                this.flowLayoutPanel3.Controls.Remove(removeItem);
+            }
+
+        }
     }
 }

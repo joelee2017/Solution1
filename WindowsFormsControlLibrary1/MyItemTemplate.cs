@@ -59,13 +59,27 @@ namespace WindowsFormsControlLibrary1
             set
             {
                 if (value != null)
-                    this.pictureBox1.Load(value);
+                    this.pictureBox1.LoadAsync(value);
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        public Image Ptimage
         {
+            get { return this.pictureBox1.Image; }
+        }
 
+        public string Id { get; set; }
+
+        public delegate void MyEventHandler(object sender, bool IsFavor);//新增委派
+        public event MyEventHandler NotifyMyFavor;//新增事件
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)//在checkBox1_CheckedChanged呼叫事件進行        
+        {
+            if(this.NotifyMyFavor !=null)
+            {
+                this.NotifyMyFavor(this, this.checkBox1.Checked);
+            }
+            //簡化寫法 this.NotifyMyFavor?.Invoke(this, this.checkBox1.Checked);
         }
     }
 }
