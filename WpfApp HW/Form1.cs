@@ -153,43 +153,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        /// <summary>
-        /// 呼叫外部方案進來，使用外部功能
-        /// global::PhotoDataModel_V2.PhotoDataSource.Search();
-        /// global NameSpace的父類別
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        async private void btnRemotePhoto_Click(object sender, EventArgs e)//網頁照片匯入
-        {
-            flowLayoutPanel1.Controls.Clear();
-            //List<PhotoDataItem> PhotoList =  global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);
-            List<PhotoDataItem> PhotoList = await PhotoDataSource.SearchAsync("car", 5);
-            for (int i = 0; i < PhotoList.Count; i++)
-            {    
-                MyItemTemplate x = new MyItemTemplate();
-                x.Desc = PhotoList[i].Title;
-                x.ImageUrl = PhotoList[i].ImagePath;
 
-                if(PhotoList[i].UniqueId !=null)
-                {
-                    x.Id = PhotoList[i].UniqueId;
-                }
-                 else
-                {
-                    x.Id = Guid.NewGuid().ToString();
-                
-                    x.NotifyMyFavor += X_NotifyMyFavor;
-                    this.flowLayoutPanel1.Controls.Add(x);
-                }
-                Application.DoEvents();
-            }
-        }
-
-        private void X_NotifyMyFavor(object sender, bool IsFavor)
-        {
-            this.Text = DateTime.Now.ToLongDateString();
-        }
 
         private void btnAddMyItem_Click(object sender, EventArgs e)//加到最愛
         {
@@ -206,25 +170,43 @@ namespace WindowsFormsApp1
                 }               
             }
         }
-        
-        private void AddMyItem_V2_Click(object sender, EventArgs e)
+
+        //=====================================================================================================
+
+        /// <summary>
+        /// 呼叫外部方案進來，使用外部功能
+        /// global::PhotoDataModel_V2.PhotoDataSource.Search();
+        /// global NameSpace的父類別
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        async private void btnRemotePhoto_Click(object sender, EventArgs e)//網頁照片匯入
         {
-            for (int i = 0; i < flowLayoutPanel1.Controls.Count +1; i++)
+            flowLayoutPanel1.Controls.Clear();
+            //List<PhotoDataItem> PhotoList =  global::PhotoDataModel_V2.PhotoDataSource.Search("car", 5);
+            List<PhotoDataItem> PhotoList = await PhotoDataSource.SearchAsync("car", 5);
+            for (int i = 0; i < PhotoList.Count - 1; i++)
             {
-                //List<MyItemTemplate> s = new List<MyItemTemplate>();
-                foreach (MyItemTemplate x in flowLayoutPanel1.Controls)
+                MyItemTemplate x = new MyItemTemplate();
+                x.Desc = PhotoList[i].Title;
+                x.ImageUrl = PhotoList[i].ImagePath;
+
+                if (PhotoList[i].UniqueId != null)
                 {
-                    if (x.DscCheck == true)
-                    {
-                        this.flowLayoutPanel3.Controls.Add(x);
-                    }
+                    x.Id = PhotoList[i].UniqueId;
                 }
+                else
+                {
+                    x.Id = Guid.NewGuid().ToString();
+
+                    x.NotifyMyFavor += X_NotifyMyFavor;
+                    this.flowLayoutPanel1.Controls.Add(x);
+                }
+                Application.DoEvents();
             }
-
-
         }
 
-        private void NotifyMyFavor(object sender, bool IsFavor)
+        private void X_NotifyMyFavor(object sender, bool IsFavor)
         {
             var item = (MyItemTemplate)sender;
             string itemID = item.Id;
@@ -246,7 +228,31 @@ namespace WindowsFormsApp1
 
                 this.flowLayoutPanel3.Controls.Remove(removeItem);
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Text = DateTime.Now.ToLongTimeString();
+        }
+
+
+        private void AddMyItem_V2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < flowLayoutPanel1.Controls.Count +1; i++)
+            {
+                //List<MyItemTemplate> s = new List<MyItemTemplate>();
+                foreach (MyItemTemplate x in flowLayoutPanel1.Controls)
+                {
+                    if (x.DscCheck == true)
+                    {
+                        this.flowLayoutPanel3.Controls.Add(x);
+                    }
+                }
+            }
+
 
         }
+
+
     }
 }

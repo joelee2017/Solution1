@@ -34,14 +34,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.AddMyItem_V2 = new WindowsFormsControlLibrary1.MyButton();
             this.btnAddMyItem = new WindowsFormsControlLibrary1.MyButton();
             this.myButton5 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton4 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton3 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton2 = new WindowsFormsControlLibrary1.MyButton();
             this.myButton1 = new WindowsFormsControlLibrary1.MyButton();
-            this.AddMyItem_V2 = new WindowsFormsControlLibrary1.MyButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,23 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(564, 401);
             this.flowLayoutPanel3.TabIndex = 9;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // AddMyItem_V2
+            // 
+            this.AddMyItem_V2.FillColor1 = System.Drawing.Color.Red;
+            this.AddMyItem_V2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddMyItem_V2.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
+            this.AddMyItem_V2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMyItem_V2.Location = new System.Drawing.Point(51, 505);
+            this.AddMyItem_V2.Name = "AddMyItem_V2";
+            this.AddMyItem_V2.Size = new System.Drawing.Size(118, 48);
+            this.AddMyItem_V2.TabIndex = 12;
+            this.AddMyItem_V2.Text = "AddMyItem_V2";
+            this.AddMyItem_V2.Click += new System.EventHandler(this.AddMyItem_V2_Click);
             // 
             // btnAddMyItem
             // 
@@ -169,19 +186,6 @@
             this.myButton1.TabIndex = 0;
             this.myButton1.Text = "GetProductPhoto";
             this.myButton1.Click += new System.EventHandler(this.GetProductPhoto_Click);
-            // 
-            // AddMyItem_V2
-            // 
-            this.AddMyItem_V2.FillColor1 = System.Drawing.Color.Red;
-            this.AddMyItem_V2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.AddMyItem_V2.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
-            this.AddMyItem_V2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMyItem_V2.Location = new System.Drawing.Point(51, 505);
-            this.AddMyItem_V2.Name = "AddMyItem_V2";
-            this.AddMyItem_V2.Size = new System.Drawing.Size(118, 48);
-            this.AddMyItem_V2.TabIndex = 12;
-            this.AddMyItem_V2.Text = "AddMyItem_V2";
-            this.AddMyItem_V2.Click += new System.EventHandler(this.AddMyItem_V2_Click);
             // 
             // Form1
             // 
