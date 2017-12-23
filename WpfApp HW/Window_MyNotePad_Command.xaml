@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window_MyNotePad_Command" Height="310.633" Width="558.874">
+        Title="Window_MyNotePad_Command" Height="310.633" Width="406.874">
     <Grid>
         <DockPanel LastChildFill="True" >
             <Menu Margin="0,0,0,240"  DockPanel.Dock="Top" Height="24">
                 <MenuItem Header="File">
-                    <MenuItem Header="Save"/>
+                    <MenuItem Header="New" Command="New"/>
+                    <MenuItem Header="Open" Name="Open" Click="Open_Click"/>
+                    <MenuItem Header="Save" Command="Save"/>
+                    <MenuItem Header="Save as" Name="SaveAs" Command="SaveAs"/>
+                    <MenuItem Header="Close" Name="Close" Click="Close_Click" />
                 </MenuItem>
                 <MenuItem Header="Edit">
                     <MenuItem Header="Cut" Command="Cut">
@@ -20,17 +24,20 @@
                     </MenuItem>
                     <MenuItem Header="Copy" Command="Copy"/>
                     <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
+                    <MenuItem Header="SelectAll" Command="SelectAll"></MenuItem>
+                    <MenuItem Header="Redo" Command="Redo"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Color">
                     <RadioButton Background="Red" Checked="RadioButton_Checked"/>
                     <RadioButton Background="Lime" Checked="RadioButton_Checked_1"/>
                     <RadioButton Background="Blue" Checked="RadioButton_Checked_2"/>
+                    <RadioButton Background="Black" Checked="RadioButton_Checked_3"/>
                 </MenuItem>
-                <Expander Header="Expander" Height="100" Width="100">
-                    <Grid Background="#FFE5E5E5"/>
-                </Expander>
+                <MenuItem Header="粗體" Name="btnBold" FontWeight="Bold" Click="btnBold_Click"></MenuItem>
+                <MenuItem Header="斜體" Name="btnItalic" Click="btnItalic_Click"></MenuItem>
+                <MenuItem Header="底線" Name="btnUnderLine" Click="btnUnderLine_Click"></MenuItem>
             </Menu>
-            <TextBox Name="TextBox1" Background="AliceBlue"  Margin="4,-235,0,0" TextWrapping="Wrap"  />
+                <TextBox x:Name="TextBox1"  Background="AliceBlue" Margin="0,-235,0,0"  />
 
         </DockPanel>
 

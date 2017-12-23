@@ -20,10 +20,10 @@ namespace WpfApp_HW
         {
 
 
-            //Window f = new Window_MyNotePad_Command();
+            Window f = new Window_MyNotePad_Command();
             //Window f = new MainWindow();
             //Form1 f = new Form1();
-            FormPhotoHW f = new FormPhotoHW();
+            //FormPhotoHW f = new FormPhotoHW();
             f.Show();
         }
     }
