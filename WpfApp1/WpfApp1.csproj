@@ -128,8 +128,95 @@
     <Compile Include="3. WPF Controls UI Demo\Window_Viewbox.xaml.cs">
       <DependentUpon>Window_Viewbox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="4-1.WPF應用\UserControl_MyClock.xaml.cs">
+      <DependentUpon>UserControl_MyClock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_MyClock_Calendar.xaml.cs">
+      <DependentUpon>Window_MyClock_Calendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_Transorm.xaml.cs">
+      <DependentUpon>Window_Transorm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_VisualBrush.xaml.cs">
+      <DependentUpon>Window_VisualBrush.xaml</DependentUpon>
+    </Compile>
     <Compile Include="4-1.WPF應用\Window_XXXBruch.xaml.cs">
       <DependentUpon>Window_XXXBruch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\02. Window_InkCanvasSave_VisualBrush.xaml.cs">
+      <DependentUpon>02. Window_InkCanvasSave_VisualBrush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\02. Window_ReflectionExample_VisualBrush.xaml.cs">
+      <DependentUpon>02. Window_ReflectionExample_VisualBrush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\03. Window_放大鏡.xaml.cs">
+      <DependentUpon>03. Window_放大鏡.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\04. Window_2D.xaml.cs">
+      <DependentUpon>04. Window_2D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\05. Window_Clip裁切.xaml.cs">
+      <DependentUpon>05. Window_Clip裁切.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\06. Window_圖形轉換.xaml.cs">
+      <DependentUpon>06. Window_圖形轉換.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\07. Window_2D動畫_Opacity_Color_Width.xaml.cs">
+      <DependentUpon>07. Window_2D動畫_Opacity_Color_Width.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\07. Window_AnimationUsingKeyFrames.xaml.cs">
+      <DependentUpon>07. Window_AnimationUsingKeyFrames.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\08. Window_使用程式碼控制動畫運行.xaml.cs">
+      <DependentUpon>08. Window_使用程式碼控制動畫運行.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\09. Window_Clock_Canvas.xaml.cs">
+      <DependentUpon>09. Window_Clock_Canvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\10. Window_MyMedia.xaml.cs">
+      <DependentUpon>10. Window_MyMedia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\11. Window_Template_TreeView.xaml.cs">
+      <DependentUpon>11. Window_Template_TreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Digit_Clock_1.xaml.cs">
+      <DependentUpon>Digit_Clock_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Digit_Clock_2.xaml.cs">
+      <DependentUpon>Digit_Clock_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_2D 動畫_使用 Path_1.xaml.cs">
+      <DependentUpon>Window_2D 動畫_使用 Path_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_2D 動畫_使用 Path_2.xaml.cs">
+      <DependentUpon>Window_2D 動畫_使用 Path_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_2D 動畫_使用 Path_3.xaml.cs">
+      <DependentUpon>Window_2D 動畫_使用 Path_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_2D_Path.xaml.cs">
+      <DependentUpon>Window_2D_Path.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_Clock.xaml.cs">
+      <DependentUpon>Window_Clock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_MyClock_Grid.xaml.cs">
+      <DependentUpon>Window_MyClock_Grid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_Style_Calc.xaml.cs">
+      <DependentUpon>Window_Style_Calc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_VidioText.xaml.cs">
+      <DependentUpon>Window_VidioText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_VisualBrush_2.xaml.cs">
+      <DependentUpon>Window_VisualBrush_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_WPF_影像播放與畫面處理.xaml.cs">
+      <DependentUpon>Window_WPF_影像播放與畫面處理.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4. WPF 多媒體應用 Demo\Demo\Window_裁切_2.xaml.cs">
+      <DependentUpon>Window_裁切_2.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -199,9 +286,129 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="4-1.WPF應用\UserControl_MyClock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_MyClock_Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_Transorm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_VisualBrush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="4-1.WPF應用\Window_XXXBruch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\02. Window_InkCanvasSave_VisualBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\02. Window_ReflectionExample_VisualBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\03. Window_放大鏡.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\04. Window_2D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\05. Window_Clip裁切.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\06. Window_圖形轉換.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\07. Window_2D動畫_Opacity_Color_Width.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\07. Window_AnimationUsingKeyFrames.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\08. Window_使用程式碼控制動畫運行.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\09. Window_Clock_Canvas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\10. Window_MyMedia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\11. Window_Template_TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Digit_Clock_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Digit_Clock_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_2D 動畫_使用 Path_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_2D 動畫_使用 Path_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_2D 動畫_使用 Path_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_2D_Path.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_Clock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_MyClock_Grid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_Style_Calc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_VidioText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_VisualBrush_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_WPF_影像播放與畫面處理.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Demo\Window_裁切_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="4. WPF 多媒體應用 Demo\Dictionary_GroupedTreeViewItemStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

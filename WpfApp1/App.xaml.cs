@@ -1,4 +1,6 @@
-﻿using Demo._3._WPF_Control.Control_Demo;
+﻿using Demo;
+using Demo._3._WPF_Control.Control_Demo;
+using Magnify;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,9 +8,11 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using UsingVisualBrush;
 using WpfApp1._3_1.WPF_ControlsUI;
 using WpfApp1._4_1.WPF應用;
 using WpfApplication__MyHomework_.TestControl;
+using WpfApplication1;
 
 namespace WpfApp1
 {
@@ -41,7 +45,7 @@ namespace WpfApp1
             this.ShutdownMode = ShutdownMode.OnLastWindowClose;//關閉事件
 
             //創建父類別  一個新的視窗
-            //Window w = new Window_XAML_Lang2();//啟動事件
+            Window w = new Window_XAML_Lang2();//啟動事件
             //Window w = new Window_WPFControls_2();//啟動事件
             //Window w = new Window_MyBook();//啟動事件
             //Window w = new Window_MetroUI();//啟動事件
@@ -50,7 +54,15 @@ namespace WpfApp1
             //Window w = new Window_TextBlock();
             //Window w = new Window_Slider();
             //Window w=new  Window_ViewBox();
-            Window w = new Window_XXXBruch();
+            //Window w = new Window_XXXBruch();
+            //Window w = new Window_VisualBrush();
+            //Window w = new Window_InkCanvasSave_VisualBrush();
+            //Window w =new Window_ReflectionExample_VisualBrush();
+            //Window w = new Window_放大鏡();
+            //Window w = new Window_2D();
+            //Window w = new Window_Transorm();
+            //Window w = new UserControl_MyClock();
+
             w.Show();
         }
     }

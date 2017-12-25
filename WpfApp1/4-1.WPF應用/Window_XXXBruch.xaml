@@ -27,6 +27,17 @@
         </Rectangle>
         <Button Content="Coding" HorizontalAlignment="Left" Margin="314,231,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Rectangle Name="rect1" RadiusX="20" RadiusY="20" HorizontalAlignment="Left" Height="40" Margin="271,171,0,0" StrokeThickness="40" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Fill="#FFFFE1E1"/>
+        <Rectangle Fill="#FFF4F4F5" Opacity="0.5" HorizontalAlignment="Left" Height="100" Margin="131,189,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <Rectangle HorizontalAlignment="Left" Height="120"  VerticalAlignment="Top" Width="10" Fill="#FFE01C1C" Margin="124,22,0,0" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform CenterX="20" CenterY="70" Angle="-2.47"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
 
     </Grid>
 </Window>

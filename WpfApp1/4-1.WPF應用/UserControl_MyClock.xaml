@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="WpfApp1._4_1.WPF應用.UserControl_MyClock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1._4_1.WPF應用"
+        mc:Ignorable="d"
+         Height="332.609" Width="289.13">
+    <Grid Background="#FFFBFDE7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="62*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Stretch="Fill">
+            <Canvas Name="MyClock" Background="AliceBlue" Height="178" Width="281">
+                <Ellipse StrokeThickness="30" Canvas.Left="43" Canvas.Top="10" Height="158" Width="187">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFB4EEFF" Offset="0.003"/>
+                            <GradientStop Color="White" Offset="0.88"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                    <Ellipse.Stroke>
+                        <ImageBrush ImageSource="/WpfApp1;component/圖庫/153H1MH-8.jpg"/>
+                    </Ellipse.Stroke>
+                    <Ellipse.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation 
+                                        Storyboard.TargetName="sec" 
+                                        Storyboard.TargetProperty="Angle" 
+                                        From="0" To="360" Duration="0:0:5" 
+                                        RepeatBehavior="Forever">
+                                        
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Ellipse.Triggers>
+
+                </Ellipse>
+                <Ellipse Height="70" Canvas.Left="134" StrokeThickness="30" Canvas.Top="19" Width="8" RenderTransformOrigin="0.5,1" Fill="White">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform x:Name="sec" Angle="458.036" />
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+            </Canvas>
+        </Viewbox>
+        <Canvas Opacity="0.6" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <Canvas.Background>
+                <VisualBrush Visual="{Binding ElementName=MyClock}"></VisualBrush>
+            </Canvas.Background>
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform AngleX="5" AngleY="5"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="20" Y="20"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+
+        </Canvas>
+
+    </Grid>
+</UserControl>

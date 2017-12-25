@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -106,7 +108,7 @@ namespace WpfApp1
             Nullable<bool> result = dlg.ShowDialog();//支援實值類型可以指派null。 這個類別無法被繼承。
                 if(result ==true)
             {
-                using (System.IO.StreamReader sr = new System.IO.StreamReader(dlg.FileName))
+                using (StreamReader sr = new StreamReader(dlg.FileName))
                 {
                     this.TextBox1.Text = sr.ReadToEnd();
                     sr.Close();
@@ -117,6 +119,35 @@ namespace WpfApp1
         private void Close_Click(object sender, RoutedEventArgs e)//關閉視窗
         {
             this.Close();
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saFile = new SaveFileDialog();
+
+            saFile.Filter = "Txt|*.txt|CS|*.cs|XAML|*.xaml";
+            //saFile.FilterIndex = 2;
+            //saFile.RestoreDirectory = true;
+
+            if (saFile.ShowDialog() == true)
+            {
+
+                string fileName = saFile.FileName;
+                using (FileStream myStream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
+                {
+                    StreamWriter sw = new StreamWriter(TextBox1.Text);
+                    //sw.Save(TextBox1.Text.ToString());
+
+
+                    //sw.Flush();
+                    //sw.Close();
+                    //myStream.Close();
+                    //MessageBox.Show("完成");
+                }
+            }
+
+
+
         }
     }
 }
