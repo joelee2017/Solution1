@@ -32,7 +32,7 @@
                                         Storyboard.TargetProperty="Angle" 
                                         From="0" To="360" Duration="0:0:5" 
                                         RepeatBehavior="Forever">
-                                        
+
                                     </DoubleAnimation>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -46,6 +46,31 @@
                             <ScaleTransform/>
                             <SkewTransform/>
                             <RotateTransform x:Name="sec" Angle="458.036" />
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                    <Ellipse.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="sec1"
+                                        Storyboard.TargetProperty="Angle"
+                                        From="0" To="360" Duration="0:1:0" 
+                                        RepeatBehavior="Forever">
+
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Ellipse.Triggers>
+                </Ellipse>
+                <Ellipse Height="88" Canvas.Left="134" StrokeThickness="30" Width="8" RenderTransformOrigin="0.5,1" Fill="#FFCD5757">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform x:Name="sec1" Angle="498.79" />
                             <TranslateTransform/>
                         </TransformGroup>
                     </Ellipse.RenderTransform>

@@ -131,8 +131,14 @@
     <Compile Include="4-1.WPF應用\UserControl_MyClock.xaml.cs">
       <DependentUpon>UserControl_MyClock.xaml</DependentUpon>
     </Compile>
+    <Compile Include="4-1.WPF應用\Window_FadeInOute.xaml.cs">
+      <DependentUpon>Window_FadeInOute.xaml</DependentUpon>
+    </Compile>
     <Compile Include="4-1.WPF應用\Window_MyClock_Calendar.xaml.cs">
       <DependentUpon>Window_MyClock_Calendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_MyScreenSaver.xaml.cs">
+      <DependentUpon>Window_MyScreenSaver.xaml</DependentUpon>
     </Compile>
     <Compile Include="4-1.WPF應用\Window_Transorm.xaml.cs">
       <DependentUpon>Window_Transorm.xaml</DependentUpon>
@@ -290,7 +296,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="4-1.WPF應用\Window_FadeInOute.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="4-1.WPF應用\Window_MyClock_Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_MyScreenSaver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

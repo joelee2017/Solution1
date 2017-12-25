@@ -32,6 +32,8 @@
             this.btnGetPhoto = new WindowsFormsControlLibrary1.MyButton();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.userControl_MyClock1 = new WpfApp1._4_1.WPF應用.UserControl_MyClock();
             this.SuspendLayout();
             // 
             // flowLayoutPanel3
@@ -75,11 +77,21 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(708, 153);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
+            // elementHost1
+            // 
+            this.elementHost1.Location = new System.Drawing.Point(28, 377);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(128, 150);
+            this.elementHost1.TabIndex = 17;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = this.userControl_MyClock1;
+            // 
             // FormPhotoHW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 551);
+            this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.btnGetPhoto);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -95,5 +107,7 @@
         private WindowsFormsControlLibrary1.MyButton btnGetPhoto;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private WpfApp1._4_1.WPF應用.UserControl_MyClock userControl_MyClock1;
     }
 }

@@ -124,25 +124,21 @@ namespace WpfApp1
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saFile = new SaveFileDialog();
-
             saFile.Filter = "Txt|*.txt|CS|*.cs|XAML|*.xaml";
-            //saFile.FilterIndex = 2;
-            //saFile.RestoreDirectory = true;
 
             if (saFile.ShowDialog() == true)
             {
 
-                string fileName = saFile.FileName;
-                using (FileStream myStream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
-                {
-                    StreamWriter sw = new StreamWriter(TextBox1.Text);
-                    //sw.Save(TextBox1.Text.ToString());
+                {                    
+                    StreamWriter sw = new StreamWriter(saFile.FileName);
+                    {
+                        sw.Write(TextBox1.Text);
+                        sw.Flush();
+                        sw.Close();
+                        
+                    }
+                    MessageBox.Show("完成");
 
-
-                    //sw.Flush();
-                    //sw.Close();
-                    //myStream.Close();
-                    //MessageBox.Show("完成");
                 }
             }
 

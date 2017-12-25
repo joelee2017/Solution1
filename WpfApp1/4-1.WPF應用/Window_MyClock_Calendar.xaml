@@ -13,7 +13,11 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Viewbox Stretch="Fill">
-                <Calendar/>
+                <Calendar Margin="20">
+                    <Calendar.Background>
+                        <ImageBrush Opacity="0.6" ImageSource="/WpfApp1;component/圖庫/img_1106029.jpg"/>
+                    </Calendar.Background>
+                </Calendar>
 
             </Viewbox>
             <local:UserControl_MyClock Grid.Column="1"/>
