@@ -64,8 +64,9 @@ namespace WpfApp1
             //Window w = new UserControl_MyClock();
             //Window w = new Window_MyClock_Calendar();
             //Window w = new Window_2D動畫_Opacity_Color_Width();
-            Window w = new Window_MyScreenSaver();
+            //Window w = new Window_MyScreenSaver();
             //Window w = new Window_FadeInOute();
+                Window w = new Window_Clock_Canvas();
             w.Show();
         }
     }

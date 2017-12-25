@@ -33,7 +33,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userControl_MyClock1 = new WpfApp1._4_1.WPF應用.UserControl_MyClock();
+            this.userControl_MyClock1 = new WpfApp1._4_1.WPF應用.Window_MyClock();
             this.SuspendLayout();
             // 
             // flowLayoutPanel3
@@ -108,6 +108,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private WpfApp1._4_1.WPF應用.UserControl_MyClock userControl_MyClock1;
+        private WpfApp1._4_1.WPF應用.Window_MyClock userControl_MyClock1;
     }
 }

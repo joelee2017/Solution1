@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfApp1._4_1.WPF應用.UserControl_MyClock"
+﻿<Window x:Class="WpfApp1._4_1.WPF應用.Window_MyClock"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -25,25 +25,23 @@
                     </Ellipse.Fill>
                     <Ellipse.Stroke>
                         <ImageBrush ImageSource="/WpfApp1;component/圖庫/153H1MH-8.jpg"/>
-                    </Ellipse.Stroke>
-                    <Ellipse.Triggers>
-                        <EventTrigger RoutedEvent="Window.Loaded">
-                            <BeginStoryboard>
-                                <Storyboard  >
-                                    <!--second-->
-                                    <DoubleAnimation  Storyboard.TargetName="second"  Storyboard.TargetProperty="Angle"   From="0" To="360" Duration="0:1:0"      RepeatBehavior="Forever"></DoubleAnimation>
-
-                                    <!--minute-->
-                                    <DoubleAnimation  Storyboard.TargetName="minute"  Storyboard.TargetProperty="Angle" From="0" To="360" Duration="1:0:0"  RepeatBehavior="Forever"></DoubleAnimation>
-
-                                    <!--hour-->
-                                    <DoubleAnimation  Storyboard.TargetName="hour"  Storyboard.TargetProperty="Angle" From="0" To="360" Duration="12:0:0"  RepeatBehavior="Forever"></DoubleAnimation>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Ellipse.Triggers>
-                   
+                    </Ellipse.Stroke>                
                 </Ellipse>
+                <Grid Name="grid1">
+                    <Grid.Resources>
+                        <Storyboard x:Key="sb1">
+                            <!--second-->
+                            <DoubleAnimation  Storyboard.TargetName="second"  Storyboard.TargetProperty="Angle"   From="0" To="360" Duration="0:1:0"  RepeatBehavior="Forever"></DoubleAnimation>
+
+                            <!--minute-->
+                            <DoubleAnimation  Storyboard.TargetName="minute"  Storyboard.TargetProperty="Angle" From="0" To="360" Duration="1:0:0"  RepeatBehavior="Forever"></DoubleAnimation>
+
+                            <!--hour-->
+                            <DoubleAnimation  Storyboard.TargetName="hour"  Storyboard.TargetProperty="Angle" From="0" To="360" Duration="12:0:0"  RepeatBehavior="Forever"></DoubleAnimation>
+                        </Storyboard>
+                    </Grid.Resources>
+                </Grid>
+                
 
                 <!--second-->
                 <Ellipse Height="70" Canvas.Left="134" Canvas.Top="19" Width="8" RenderTransformOrigin="0.5,1" Fill="White">                                       
@@ -55,6 +53,16 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </Ellipse.RenderTransform>
+                   <!--<Ellipse.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard x:Name="sec1">
+                                    --><!--second--><!--
+                                    <DoubleAnimation  Storyboard.TargetName="second"  Storyboard.TargetProperty="Angle"   From="0" To="360" Duration="0:1:0"  RepeatBehavior="Forever"></DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Ellipse.Triggers>-->
                 </Ellipse>
 
                 <!--minute-->
@@ -65,7 +73,17 @@
                             <RotateTransform x:Name="minute" Angle="0" />
                             <TranslateTransform/>
                         </TransformGroup>
-                    </Ellipse.RenderTransform>                 
+                    </Ellipse.RenderTransform>
+                    <!--<Ellipse.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard x:Name="min2">
+                                    --><!--minute--><!--
+                                    <DoubleAnimation  Storyboard.TargetName="minute"  Storyboard.TargetProperty="Angle" From="0" To="360" Duration="1:0:0"  RepeatBehavior="Forever"></DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Ellipse.Triggers>-->
                 </Ellipse>
 
                 <!--hour-->
@@ -75,7 +93,17 @@
                             <RotateTransform x:Name="hour" Angle="0" />
                             <TranslateTransform/>
                         </TransformGroup>
-                    </Ellipse.RenderTransform>                    
+                    </Ellipse.RenderTransform>
+                    <!--<Ellipse.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard x:Name="hou3">
+                                    --><!--hour--><!--
+                                    <DoubleAnimation  Storyboard.TargetName="hour"  Storyboard.TargetProperty="Angle" From="0" To="360" Duration="12:0:0"  RepeatBehavior="Forever"></DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Ellipse.Triggers>-->
                 </Ellipse>               
                 
                 
@@ -98,4 +126,4 @@
         </Canvas>
 
     </Grid>
-</UserControl>
+</Window>

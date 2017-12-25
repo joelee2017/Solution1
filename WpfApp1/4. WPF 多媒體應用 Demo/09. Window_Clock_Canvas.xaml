@@ -37,7 +37,7 @@
                 <Rectangle.RenderTransform >
                     <RotateTransform  x:Name="second" CenterX="2"  CenterY="134" ></RotateTransform>
                 </Rectangle.RenderTransform>
-                <!--<Rectangle.Triggers>
+                <Rectangle.Triggers>
                     <EventTrigger RoutedEvent="Window.Loaded">
                         <BeginStoryboard>
                             <Storyboard x:Name="sb1" >
@@ -48,7 +48,7 @@
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
-                </Rectangle.Triggers>-->
+                </Rectangle.Triggers>
             </Rectangle>
 
             <!--minute-->
@@ -56,13 +56,13 @@
                 <Rectangle.RenderTransform >
                     <RotateTransform  x:Name="minute"  CenterX="2"  CenterY="120" ></RotateTransform>
                 </Rectangle.RenderTransform>
-                <!--<Rectangle.Triggers>
+                <Rectangle.Triggers>
                     <EventTrigger RoutedEvent="Window.Loaded">
                         <BeginStoryboard>
-                         
+
                         </BeginStoryboard>
                     </EventTrigger>
-                </Rectangle.Triggers>-->
+                </Rectangle.Triggers>
             </Rectangle>
 
             <!--hour-->
@@ -70,7 +70,7 @@
                 <Rectangle.RenderTransform >
                     <RotateTransform  x:Name="hour"  CenterX="2"  CenterY="105" ></RotateTransform>
                 </Rectangle.RenderTransform>
-                <!--<Rectangle.Triggers>
+                <Rectangle.Triggers>
                     <EventTrigger RoutedEvent="Window.Loaded">
                         <BeginStoryboard>
                             <Storyboard  x:Name="sb3" >
@@ -81,7 +81,7 @@
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
-                </Rectangle.Triggers>-->
+                </Rectangle.Triggers>
             </Rectangle>
         </Canvas>
     </Grid>

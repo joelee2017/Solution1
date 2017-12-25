@@ -70,6 +70,9 @@
     <Compile Include="FormPhotoHW.Designer.cs">
       <DependentUpon>FormPhotoHW.cs</DependentUpon>
     </Compile>
+    <Compile Include="Window_MyClock.xaml.cs">
+      <DependentUpon>Window_MyClock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window_MyNotePad_Command.xaml.cs">
       <DependentUpon>Window_MyNotePad_Command.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Window_MyClock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Window_MyNotePad_Command.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

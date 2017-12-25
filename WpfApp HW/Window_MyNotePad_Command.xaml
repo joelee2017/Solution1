@@ -4,16 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:encoding="UTF-8"
         mc:Ignorable="d"
         Title="Window_MyNotePad_Command" Height="310.633" Width="406.874">
     <Grid>
         <DockPanel LastChildFill="True" >
-            <Menu Margin="0,0,0,240"  DockPanel.Dock="Top" Height="24">
+            <Menu  Margin="0,0,0,240"  DockPanel.Dock="Top" Height="24">
                 <MenuItem Header="File">
                     <MenuItem Header="New" Command="New"/>
                     <MenuItem Header="Open" Name="Open" Click="Open_Click"/>
                     <MenuItem Header="Save" Name="Save" Click="Save_Click"/>
-                    <MenuItem Header="Save as" Name="SaveAs" Command="SaveAs"/>
                     <MenuItem Header="Close" Name="Close" Click="Close_Click" />
                 </MenuItem>
                 <MenuItem Header="Edit">

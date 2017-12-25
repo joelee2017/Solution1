@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:WpfApp1._3_1.WPF_ControlsUI"
         xmlns:WPFMitsuControls="clr-namespace:WPFMitsuControls;assembly=WPFMitsuControls" x:Class="WpfApp1._3_1.WPF_ControlsUI.Window_MyBook"
         mc:Ignorable="d"
-        Title="Window_MyBook" Height="352.427" Width="310.922">
+        Title="Window_MyBook" Height="349.014" Width="330.549">
     <Viewbox Stretch="Fill">
         <Grid Height="321" Width="303">
             <Grid.RowDefinitions>
-                <RowDefinition Height="162*"/>
+                <RowDefinition Height="171*"/>
                 <RowDefinition Height="58"/>
-                <RowDefinition Height="49*"/>
+                <RowDefinition Height="92*"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="1" Orientation="Horizontal" Background="AliceBlue" Margin="1">
                 <Button Content="&lt;" Margin="5" Width="50" Click="Button_Click_1"/>
                 <Button Content="&gt;" Margin="5" Width="50" Click="Button_Click"/>
-                <Button Content="First" Margin="5" Width="50"/>
+                <Button Name="First" Content="First" Margin="5" Width="50"   />
                 <Button Content="Last" Margin="5" Width="50"/>
             </StackPanel>
 

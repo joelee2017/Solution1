@@ -49,7 +49,7 @@ namespace WpfApp1._4_1.WPF應用
             this.TextBlock3.Text = DateTime.UtcNow.ToLongTimeString();
             //屬性寫法
             //this.TextBlock1.Margin = new Thickness(this.TextBlock1.Margin.Left + 20, this.TextBlock1.Margin.Top, 0, 0);
-            this.myTranslatex.X +=50;
+            this.myTranslatex.Y +=50;
             if(this.myTranslatex.X>this.Width)
             {
                 this.myTranslatex.X = 0;
