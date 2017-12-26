@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnGetPhoto = new WindowsFormsControlLibrary1.MyButton();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userControl_MyClock1 = new WpfApp1._4_1.WPF應用.Window_MyClock();
+            this.btnGetPhoto = new WindowsFormsControlLibrary1.MyButton();
+            this.tableAdapterManager1 = new WpfApp_HW.ADWDataSet1TableAdapters.TableAdapterManager();
             this.SuspendLayout();
             // 
             // flowLayoutPanel3
@@ -42,19 +41,6 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(529, 368);
             this.flowLayoutPanel3.TabIndex = 16;
-            // 
-            // btnGetPhoto
-            // 
-            this.btnGetPhoto.FillColor1 = System.Drawing.Color.Red;
-            this.btnGetPhoto.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnGetPhoto.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
-            this.btnGetPhoto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetPhoto.Location = new System.Drawing.Point(28, 192);
-            this.btnGetPhoto.Name = "btnGetPhoto";
-            this.btnGetPhoto.Size = new System.Drawing.Size(143, 61);
-            this.btnGetPhoto.TabIndex = 15;
-            this.btnGetPhoto.Text = "GetPhoto";
-            this.btnGetPhoto.Click += new System.EventHandler(this.btnGetPhoto_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -77,21 +63,31 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(708, 153);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
-            // elementHost1
+            // btnGetPhoto
             // 
-            this.elementHost1.Location = new System.Drawing.Point(28, 377);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(128, 150);
-            this.elementHost1.TabIndex = 17;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userControl_MyClock1;
+            this.btnGetPhoto.FillColor1 = System.Drawing.Color.Red;
+            this.btnGetPhoto.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGetPhoto.FillShape = WindowsFormsControlLibrary1.MyButton.Shape.Ellipse;
+            this.btnGetPhoto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetPhoto.Location = new System.Drawing.Point(3, 156);
+            this.btnGetPhoto.Name = "btnGetPhoto";
+            this.btnGetPhoto.Size = new System.Drawing.Size(143, 61);
+            this.btnGetPhoto.TabIndex = 15;
+            this.btnGetPhoto.Text = "GetPhoto";
+            this.btnGetPhoto.Click += new System.EventHandler(this.btnGetPhoto_Click);
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.ProductPhotoTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = WpfApp_HW.ADWDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // FormPhotoHW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 551);
-            this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.btnGetPhoto);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -107,7 +103,7 @@
         private WindowsFormsControlLibrary1.MyButton btnGetPhoto;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private WpfApp1._4_1.WPF應用.Window_MyClock userControl_MyClock1;
+        private ADWDataSet1TableAdapters.TableAdapterManager tableAdapterManager1;
+        //private WpfApp1._4_1.WPF應用.Window_MyClock userControl_MyClock1;
     }
 }

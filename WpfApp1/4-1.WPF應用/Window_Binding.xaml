@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1._4_1.WPF應用.Window_Binding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1._4_1.WPF應用"
+        mc:Ignorable="d"
+        Title="Window_Binding" Height="276.977" Width="431.163">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfApp1;component/MyThemesStyle2/Dictionary_ShinyRed.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Viewbox Stretch="Fill">
+        <Grid Background="LightGoldenrodYellow" Height="246" Width="423">
+            <!--資料聯繫，binding  ElementName名稱 path 屬性-->
+            <TextBlock FontSize="{Binding Value, ElementName=Silder1}" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <Slider x:Name="Silder1" Minimum="8" Maximum="50" Value="20" HorizontalAlignment="Left" Margin="153,36,0,0" VerticalAlignment="Top" Width="234"/>
+            <Slider  x:Name="Silder1_Copy"  Orientation="Vertical" Minimum="100" Maximum="200" Value="100" HorizontalAlignment="Left" Margin="383,91,0,0" VerticalAlignment="Top" Width="20" Height="131"/>
+            <Image Width="{Binding Value, ElementName=Silder1_Copy}" Height="{Binding Value, ElementName=Silder1_Copy}" HorizontalAlignment="Left" Margin="234,79,0,0" VerticalAlignment="Top" Source="/WpfApp1;component/圖庫/ggg.jpg" Stretch="Fill"/>
+            
+            <!--當CHECKBOX1 TRUE 時 BUTTON 啟動-->
+            <CheckBox Name="checkbox1" IsChecked="True" Content="I Agree" HorizontalAlignment="Left" Margin="29,167,0,0" VerticalAlignment="Top" Foreground="#FFD13232"/>
+            <Button IsEnabled="{Binding ElementName=checkbox1,Path=IsChecked}" Content="Ok" HorizontalAlignment="Left" Margin="84,205,0,0" VerticalAlignment="Top" Width="75"/>
+
+        </Grid>
+    </Viewbox>
+</Window>

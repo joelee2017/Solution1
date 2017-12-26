@@ -58,6 +58,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFMitsuControls">
+      <HintPath>..\shared\WPFMitsuControls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="FormPhotoHW.Designer.cs">
       <DependentUpon>FormPhotoHW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Page.xaml.cs">
+      <DependentUpon>UserControl_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_MyBook.xaml.cs">
+      <DependentUpon>Window_MyBook.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window_MyClock.xaml.cs">
       <DependentUpon>Window_MyClock.xaml</DependentUpon>
@@ -100,6 +109,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControl_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_MyBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window_MyClock.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -171,6 +188,46 @@
       <Project>{3182E046-FA39-4B71-9D95-FF04224B8C51}</Project>
       <Name>WpfApp1</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="圖庫\139-16122Q60053.jpg" />
+    <Resource Include="圖庫\1483416288976.jpg" />
+    <Resource Include="圖庫\1483503509137.jpg" />
+    <Resource Include="圖庫\1483601927981.jpg" />
+    <Resource Include="圖庫\1483601974347.jpg" />
+    <Resource Include="圖庫\1483601992641.jpg" />
+    <Resource Include="圖庫\1492741695203.jpg" />
+    <Resource Include="圖庫\1492741710670.jpg" />
+    <Resource Include="圖庫\153H11591-18.jpg" />
+    <Resource Include="圖庫\153H135G-14.jpg" />
+    <Resource Include="圖庫\153H13c2-1.jpg" />
+    <Resource Include="圖庫\153H15Q2-15.jpg" />
+    <Resource Include="圖庫\153H1MH-8.jpg" />
+    <Resource Include="圖庫\158_SXDn30G5663903372dmU_large.jpg" />
+    <Resource Include="圖庫\22-1609101F0212U.jpg" />
+    <Resource Include="圖庫\22-160F9213Z1K7.jpg" />
+    <Resource Include="圖庫\32-1G01114151H96.jpg" />
+    <Resource Include="圖庫\32-1G011141534608.jpg" />
+    <Resource Include="圖庫\5-160512144015.jpg" />
+    <Resource Include="圖庫\6-1F104141Z4.jpg" />
+    <Resource Include="圖庫\6-1F104142U6.jpg" />
+    <Resource Include="圖庫\73689e9e7833630000b6.jpg" />
+    <Resource Include="圖庫\c524f7d4jw1ej551n8g4wj218g0p0tnz.jpg" />
+    <Resource Include="圖庫\c524f7d4jw1ej551rjisij20y80ncn7u.jpg" />
+    <Resource Include="圖庫\c524f7d4jw1ej551xbiorj20yu0oeqga.jpg" />
+    <Resource Include="圖庫\changjingtupianhuihua4.jpg" />
+    <Resource Include="圖庫\fengjingchahuatupian.jpg" />
+    <Resource Include="圖庫\images %281%29.jpg" />
+    <Resource Include="圖庫\images %282%29.jpg" />
+    <Resource Include="圖庫\images %283%29.jpg" />
+    <Resource Include="圖庫\images %284%29.jpg" />
+    <Resource Include="圖庫\images %285%29.jpg" />
+    <Resource Include="圖庫\images.jpg" />
+    <Resource Include="圖庫\img_1106029.jpg" />
+    <Resource Include="圖庫\img_1106036.jpg" />
+    <Resource Include="圖庫\img_1106040.jpg" />
+    <Resource Include="圖庫\uAa4u9F.jpg" />
+    <Resource Include="圖庫\下載.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

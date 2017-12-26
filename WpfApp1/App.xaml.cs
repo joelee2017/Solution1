@@ -66,7 +66,10 @@ namespace WpfApp1
             //Window w = new Window_2D動畫_Opacity_Color_Width();
             //Window w = new Window_MyScreenSaver();
             //Window w = new Window_FadeInOute();
-                Window w = new Window_Clock_Canvas();
+            //Window w = new Window_Clock_Canvas();
+            //Window w = new Window_Resources_1();
+            //Window w = new Window_Resources_2();
+            Window w = new Window_Binding();
             w.Show();
         }
     }

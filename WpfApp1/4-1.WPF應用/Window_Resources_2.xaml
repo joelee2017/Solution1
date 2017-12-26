@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp1._4_1.WPF應用.Window_Resources_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1._4_1.WPF應用"
+        mc:Ignorable="d"
+        Title="Window_Resources_2" Height="300" Width="300">
+            <!--套用參考BUTTON-->
+    <Window.Resources> 
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfApp1;component/MyThemesStyle/Dictionary_ButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/WpfApp1;component/4. WPF 多媒體應用 Demo/Dictionary_GroupedTreeViewItemStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/WpfApp1;component/MyThemesStyle/Dictionary_OtherStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/WpfApp1;component/MyThemesStyle2/Dictionary_ShinyRed.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>            
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="32,69,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource MyCircleButton}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="32,128,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource MyGlassButton}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="48,217,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource MyButton}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="152,53,0,0" VerticalAlignment="Top" Width="60"/>
+        <ComboBox HorizontalAlignment="Left" Margin="136,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="180,175,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

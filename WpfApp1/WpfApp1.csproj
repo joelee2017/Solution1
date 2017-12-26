@@ -131,14 +131,26 @@
     <Compile Include="4-1.WPF應用\UserControl_MyClock.xaml.cs">
       <DependentUpon>UserControl_MyClock.xaml</DependentUpon>
     </Compile>
+    <Compile Include="4-1.WPF應用\Window_Binding.xaml.cs">
+      <DependentUpon>Window_Binding.xaml</DependentUpon>
+    </Compile>
     <Compile Include="4-1.WPF應用\Window_FadeInOute.xaml.cs">
       <DependentUpon>Window_FadeInOute.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_KeyFrames.xaml.cs">
+      <DependentUpon>Window_KeyFrames.xaml</DependentUpon>
     </Compile>
     <Compile Include="4-1.WPF應用\Window_MyClock_Calendar.xaml.cs">
       <DependentUpon>Window_MyClock_Calendar.xaml</DependentUpon>
     </Compile>
     <Compile Include="4-1.WPF應用\Window_MyScreenSaver.xaml.cs">
       <DependentUpon>Window_MyScreenSaver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_Resources_1.xaml.cs">
+      <DependentUpon>Window_Resources_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_Resources_2.xaml.cs">
+      <DependentUpon>Window_Resources_2.xaml</DependentUpon>
     </Compile>
     <Compile Include="4-1.WPF應用\Window_Transorm.xaml.cs">
       <DependentUpon>Window_Transorm.xaml</DependentUpon>
@@ -296,7 +308,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="4-1.WPF應用\Window_Binding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="4-1.WPF應用\Window_FadeInOute.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_KeyFrames.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -305,6 +325,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="4-1.WPF應用\Window_MyScreenSaver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_Resources_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_Resources_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -424,6 +452,66 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="MyThemesStyle2\Dictionary_BureauBlack.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle2\Dictionary_BureauBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle2\Dictionary_ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle2\Dictionary_ExpressionLight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle2\Dictionary_ShinyBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle2\Dictionary_ShinyRed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle2\Dictionary_WhistlerBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_BasicControlTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_BasicControlTemplate_HorizontalListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_BasicControlTemplate_VerticalListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_Brush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_DataGridStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_GelButtonResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyThemesStyle\Dictionary_OtherStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -451,7 +539,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="ggg.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="圖庫\139-16122Q60053.jpg" />
     <Resource Include="圖庫\1483416288976.jpg" />
