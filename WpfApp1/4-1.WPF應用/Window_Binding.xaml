@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1._4_1.WPF應用"
         mc:Ignorable="d"
-        Title="Window_Binding" Height="276.977" Width="431.163">
+        Title="Window_Binding" Height="523.101" Width="913.234">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,18 +13,43 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Viewbox Stretch="Fill">
-        <Grid Background="LightGoldenrodYellow" Height="246" Width="423">
-            <!--資料聯繫，binding  ElementName名稱 path 屬性-->
-            <TextBlock FontSize="{Binding Value, ElementName=Silder1}" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-            <Slider x:Name="Silder1" Minimum="8" Maximum="50" Value="20" HorizontalAlignment="Left" Margin="153,36,0,0" VerticalAlignment="Top" Width="234"/>
-            <Slider  x:Name="Silder1_Copy"  Orientation="Vertical" Minimum="100" Maximum="200" Value="100" HorizontalAlignment="Left" Margin="383,91,0,0" VerticalAlignment="Top" Width="20" Height="131"/>
-            <Image Width="{Binding Value, ElementName=Silder1_Copy}" Height="{Binding Value, ElementName=Silder1_Copy}" HorizontalAlignment="Left" Margin="234,79,0,0" VerticalAlignment="Top" Source="/WpfApp1;component/圖庫/ggg.jpg" Stretch="Fill"/>
-            
-            <!--當CHECKBOX1 TRUE 時 BUTTON 啟動-->
-            <CheckBox Name="checkbox1" IsChecked="True" Content="I Agree" HorizontalAlignment="Left" Margin="29,167,0,0" VerticalAlignment="Top" Foreground="#FFD13232"/>
-            <Button IsEnabled="{Binding ElementName=checkbox1,Path=IsChecked}" Content="Ok" HorizontalAlignment="Left" Margin="84,205,0,0" VerticalAlignment="Top" Width="75"/>
 
-        </Grid>
-    </Viewbox>
+    <Grid Background="LightGoldenrodYellow">
+        <!--資料聯繫，binding  ElementName名稱 path 屬性-->
+        <TextBlock FontSize="{Binding Value, ElementName=Silder1}" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Slider x:Name="Silder1" Minimum="8" Maximum="50" Value="20" HorizontalAlignment="Left" Margin="153,36,0,0" VerticalAlignment="Top" Width="234"/>
+        <Slider  x:Name="Silder1_Copy"  Orientation="Vertical" Minimum="100" Maximum="200" Value="100" HorizontalAlignment="Left" Margin="346,79,0,0" VerticalAlignment="Top" Width="20" Height="131"/>
+        <Image Width="{Binding Value, ElementName=Silder1_Copy}" Height="{Binding Value, ElementName=Silder1_Copy}" HorizontalAlignment="Left" Margin="234,79,0,0" VerticalAlignment="Top" Source="/WpfApp1;component/圖庫/ggg.jpg" Stretch="Fill"/>
+
+        <!--當CHECKBOX1 TRUE 時 BUTTON 啟動-->
+        <CheckBox Name="checkbox1" IsChecked="True" Content="I Agree" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Foreground="#FFD13232"/>
+        <Button IsEnabled="{Binding ElementName=checkbox1,Path=IsChecked}" Content="Ok" HorizontalAlignment="Left" Margin="0,205,0,0" VerticalAlignment="Top" Width="75"/>
+        <!--資料BINDING-->
+        <StackPanel Name="stackPanel" Orientation="Vertical" Background="AliceBlue" HorizontalAlignment="Left" Height="94" Margin="109,85,0,0" VerticalAlignment="Top" Width="97">
+            <TextBlock  Text="{Binding Path=EmpName}" Margin="3"></TextBlock>
+            <DatePicker Text="{Binding HireDate}" Margin="3"></DatePicker>
+            <Image Source="{Binding ImagePath}" Height="30" Margin="3"></Image>
+        </StackPanel>
+        <Button Content="oneEmployee" HorizontalAlignment="Left" Margin="116,184,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click" Height="16"/>
+        <Button Content="ListEmployee" HorizontalAlignment="Left" Margin="495,24,0,0" VerticalAlignment="Top" Width="89" Click="Button_Click_1"/>
+        <ListBox Name="listbox1" HorizontalAlignment="Left" Height="71" Margin="382,68,0,0" VerticalAlignment="Top" Width="145"/>
+        <ListBox Name="listbox2" DisplayMemberPath="EmpName" HorizontalAlignment="Left" Height="71" Margin="382,151,0,0" VerticalAlignment="Top" Width="145"/>
+
+
+        <ListBox Name="listbox3" ItemsSource="{Binding ImagePath}" HorizontalAlignment="Left" Height="198" Margin="382,243,0,0" VerticalAlignment="Top" Width="300">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Name="stackPanel" Orientation="Vertical" Background="AliceBlue" VerticalAlignment="Top" Width="97">
+                        <TextBlock  Text="{Binding Path=EmpName}" Margin="3"></TextBlock>
+                        <DatePicker Text="{Binding HireDate}" Margin="3"></DatePicker>
+                        <Image Source="{Binding ImagePath}" Height="30" Margin="3"></Image>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+
+    </Grid>
+
 </Window>

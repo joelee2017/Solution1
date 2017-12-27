@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1._4_1.WPF應用"
         mc:Ignorable="d" WindowState="Maximized"
         Title="Window_FadeInOute" Height="300" Width="300">
+            <!--動畫-->
     <Window.Resources>
         <Storyboard x:Key="fadeIn">
             <DoubleAnimation
@@ -22,6 +23,7 @@
                      From="1" To="0" Duration="0:0:5" >
             </DoubleAnimation>
         </Storyboard>
+        
     </Window.Resources>
     <Grid Name="grid1" Opacity="0.6">
         <Grid.Background>

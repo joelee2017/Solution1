@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp_HW"
         xmlns:WPFMitsuControls="clr-namespace:WPFMitsuControls;assembly=WPFMitsuControls" x:Class="WpfApp_HW.Window_MyBook"
         mc:Ignorable="d"
-        Title="Window_MyBook" Height="363.489" Width="297.907">
+        Title="Window_MyBook" Height="500" Width="400">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -22,18 +22,19 @@
                 <RowDefinition Height="39"/>
                 <RowDefinition Height="103*"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="AliceBlue" Margin="1">
-                <Button Content="Upage" Margin="5" Width="50" Click="Button_Click"/>
-                <Button Content="Dpage;" Margin="5" Width="50" Click="Button_Click_1"/>
-                <Button x:Name="First" Content="First" Margin="5" Width="50"   />
-                <Button Content="Last" Margin="5" Width="50"/>
+            <StackPanel ButtonBase.Click="StackPanel_Click" Grid.Row="1" Orientation="Horizontal" Background="AliceBlue" Margin="1">
+                <Button Name="Upage" Content="&lt;"  Margin="3" Width="50"/>
+                <Button Name="Dpage" Content=">"  Margin="3" Width="50"/>
+                <Button Name="First" Content="First" Margin="3" Width="50" />
+                <Button Name="Last" Content="Last" Margin="3" Width="50"/>
+                <Button Name="Load" Content="Load" Margin="3" Width="50" Click="Button_Click_2"/>
             </StackPanel>
             <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible">
-            <StackPanel Orientation="Horizontal" x:Name="stackPanel">
-                
-            </StackPanel>
+                <StackPanel Orientation="Horizontal" x:Name="stackPanel"></StackPanel>
             </ScrollViewer>
-
+            <WPFMitsuControls:Book Name="MyBook" Height="Auto" Width="Auto">
+                <Image Source="F:\MSIT11730305\8-1.WPF\Solution1\WpfApp HW\圖庫\153H1MH-8.jpg"></Image>
+            </WPFMitsuControls:Book>
         </Grid>
     </Viewbox>
 </Window>

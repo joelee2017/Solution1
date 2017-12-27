@@ -7,18 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
+    <Viewbox Stretch="Fill">
+        <Grid Background="Coral" Height="300" Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="229*"/>
+                <RowDefinition Height="71*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="1">
+                <Label x:Name="label"  Content="label1" HorizontalAlignment="Left" Margin="192,26,0,0" VerticalAlignment="Top" Width="98" FontFamily="Consolas" FontSize="20" Height="35"/>
+            </StackPanel>
+            <Image x:Name="Image1" Margin="4" Source="圖庫/1483601927981.jpg" />
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="229*"/>
-            <RowDefinition Height="71*"/>
-        </Grid.RowDefinitions>
-        <Image Name="Image1" Margin="4" Source="圖庫/1483601927981.jpg" ></Image>
-        <Label Name="Label1" Content="Label1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="99" FontFamily="Consolas" FontSize="20" Height="33"/>
-        <Viewbox HorizontalAlignment="Left" Margin="249,16,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="34" Stretch="Fill">
-            <CheckBox x:Name="CheckBox1" Checked="CheckBox1_Checked" Unchecked="CheckBox1_Unchecked" Content="" RenderTransformOrigin="0.462,0.508" Height="17" Width="17"/>
+            <Viewbox Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="21" Width="23" Stretch="Fill">
+                <CheckBox x:Name="CheckBox1" Checked="CheckBox1_Checked_1" Unchecked="CheckBox1_Unchecked" Content="" RenderTransformOrigin="0.905,0.395" Height="17" Width="17"/>
+            </Viewbox>
 
-        </Viewbox>
+        </Grid>
 
-    </Grid>
+    </Viewbox>
+
 </UserControl>

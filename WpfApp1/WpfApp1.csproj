@@ -134,6 +134,12 @@
     <Compile Include="4-1.WPF應用\Window_Binding.xaml.cs">
       <DependentUpon>Window_Binding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="4-1.WPF應用\Window_Binding_DB.xaml.cs">
+      <DependentUpon>Window_Binding_DB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="4-1.WPF應用\Window_CRUD_Starter.xaml.cs">
+      <DependentUpon>Window_CRUD_Starter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="4-1.WPF應用\Window_FadeInOute.xaml.cs">
       <DependentUpon>Window_FadeInOute.xaml</DependentUpon>
     </Compile>
@@ -311,6 +317,14 @@
     <Page Include="4-1.WPF應用\Window_Binding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_Binding_DB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="4-1.WPF應用\Window_CRUD_Starter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="4-1.WPF應用\Window_FadeInOute.xaml">
       <SubType>Designer</SubType>
@@ -531,6 +545,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\DataModel.ProductPhoto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

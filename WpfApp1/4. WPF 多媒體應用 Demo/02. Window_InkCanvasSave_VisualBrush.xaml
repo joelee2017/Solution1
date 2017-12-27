@@ -8,8 +8,7 @@
             <ColumnDefinition Width="144*" />
         </Grid.ColumnDefinitions>
         <Canvas>
-            <Canvas.Background>
-                
+            <Canvas.Background>               
               
 
                 <!-- Way 1: 複雜屬性 - 屬性項目語法-->

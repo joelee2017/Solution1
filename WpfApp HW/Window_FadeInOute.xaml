@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp_HW.Window_FadeInOute"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_HW"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="Window_FadeInOute" Height="300" Width="300">
+    <Window.Resources>
+        <Storyboard  x:Key="fadeIn">
+            <DoubleAnimation Storyboard.TargetName="grid1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:5">                                    
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard  x:Key="fadeOut">
+            <DoubleAnimation Storyboard.TargetName="grid1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:5">
+            </DoubleAnimation>
+        </Storyboard>
+    </Window.Resources>        
+    
+        <Grid Name="grid1" Opacity="0.6">
+        <Grid.Background>
+            <ImageBrush ImageSource="圖庫/1483601927981.jpg"/>
+        </Grid.Background>
+    </Grid>
+
+</Window>

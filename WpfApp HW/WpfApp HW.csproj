@@ -76,6 +76,9 @@
     <Compile Include="UserControl_Page.xaml.cs">
       <DependentUpon>UserControl_Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Window_FadeInOute.xaml.cs">
+      <DependentUpon>Window_FadeInOute.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window_MyBook.xaml.cs">
       <DependentUpon>Window_MyBook.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControl_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_FadeInOute.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

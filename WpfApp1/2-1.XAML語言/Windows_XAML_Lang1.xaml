@@ -6,53 +6,56 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Windows_XAML_Lang1" Height="311.765" Width="392.235">
-    <Grid Name="Grid1" Background="AliceBlue" ShowGridLines="True" Margin="0,0,0,-1">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="44*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="42*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="116*"/>
-            <ColumnDefinition Width="119*"/>
-            <ColumnDefinition Width="122*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Codeing" HorizontalAlignment="Left" Margin="27,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="19" Click="Button_Click" FontSize="10" FontFamily="Consolas"/>
-        <Button Name="button2" Content="簡單屬性" HorizontalAlignment="Left" Margin="17,50,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Background="#661BACBC" Height="19" FontSize="10" FontFamily="Consolas"/>
-        <Button Name="button1" Content="複雜屬性" Grid.Column="1" HorizontalAlignment="Left" Margin="21,56,0,0" VerticalAlignment="Top" Width="75" Height="19" FontSize="10" FontFamily="Consolas">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="Green" Offset="0"></GradientStop>
-                    <GradientStop Color="Orange" Offset="0.5"></GradientStop>
-                    <GradientStop Color="AliceBlue" Offset="0.7"></GradientStop>
-                    <GradientStop Color="Red" Offset="1"></GradientStop>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Label Content="簡單屬性" HorizontalAlignment="Left" Margin="27,30,0,0" VerticalAlignment="Top" FontFamily="Consolas" FontSize="10" RenderTransformOrigin="0.768,0.58" Height="22" Width="50"/>
-        <Label Content="複雜屬性" HorizontalAlignment="Left" Margin="38,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.703,0.384" Grid.Column="1" FontFamily="Consolas" FontSize="10" Height="22" Width="50"/>
-        <Button Name="button3" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="21,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="19" FontSize="10" FontFamily="Consolas">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFF0EDE8" Offset="0"/>
-                    <GradientStop Color="#FFFDAE24" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Label Content="標記擴充{}(標記延伸)" HorizontalAlignment="Left" Margin="7,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.703,0.384" Grid.Column="2" FontSize="10" FontFamily="Consolas" Height="22" Width="112"/>
-        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="22,56,0,0" VerticalAlignment="Top" Width="75" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
-        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="22,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Ellipse Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="22,24,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="84">
-            <Ellipse.Fill>
-                <RadialGradientBrush GradientOrigin="0.7,0.25">
-                    <GradientStop Color="White" Offset="0.3"/>
-                    <GradientStop Color="Red" Offset="0.6"/>
-                    <GradientStop Color="Cyan" Offset="0.6"/>
-                    <GradientStop Color="CadetBlue" Offset="1"/>
-                </RadialGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
+    <!--ShowGridLines格線-->
+    <Viewbox Margin="0,0,0,-1" Stretch="Fill">
+        <Grid x:Name="Grid1" Background="AliceBlue" ShowGridLines="True" Height="283" Width="384">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44*"/>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="42*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="116*"/>
+                <ColumnDefinition Width="119*"/>
+                <ColumnDefinition Width="122*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Codeing" HorizontalAlignment="Left" Margin="27,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="19" Click="Button_Click" FontSize="10" FontFamily="Consolas"/>
+            <Button x:Name="button2" Content="簡單屬性" HorizontalAlignment="Left" Margin="17,50,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Background="#661BACBC" Height="19" FontSize="10" FontFamily="Consolas"/>
+            <Button x:Name="button1" Content="複雜屬性" Grid.Column="1" HorizontalAlignment="Left" Margin="21,56,0,0" VerticalAlignment="Top" Width="75" Height="19" FontSize="10" FontFamily="Consolas">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Green" Offset="0"/>
+                        <GradientStop Color="Orange" Offset="0.5"/>
+                        <GradientStop Color="AliceBlue" Offset="0.7"/>
+                        <GradientStop Color="Red" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Content="簡單屬性" HorizontalAlignment="Left" Margin="27,30,0,0" VerticalAlignment="Top" FontFamily="Consolas" FontSize="10" RenderTransformOrigin="0.768,0.58" Height="22" Width="50"/>
+            <Label Content="複雜屬性" HorizontalAlignment="Left" Margin="38,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.703,0.384" Grid.Column="1" FontFamily="Consolas" FontSize="10" Height="22" Width="50"/>
+            <Button x:Name="button3" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="21,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="19" FontSize="10" FontFamily="Consolas">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF0EDE8" Offset="0"/>
+                        <GradientStop Color="#FFFDAE24" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Content="標記擴充{}(標記延伸)" HorizontalAlignment="Left" Margin="7,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.703,0.384" Grid.Column="2" FontSize="10" FontFamily="Consolas" Height="22" Width="112"/>
+            <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="22,56,0,0" VerticalAlignment="Top" Width="75" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
+            <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="22,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+            <Ellipse Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="22,24,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="84">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.7,0.25">
+                        <GradientStop Color="White" Offset="0.3"/>
+                        <GradientStop Color="Red" Offset="0.6"/>
+                        <GradientStop Color="Cyan" Offset="0.6"/>
+                        <GradientStop Color="CadetBlue" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
 
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>

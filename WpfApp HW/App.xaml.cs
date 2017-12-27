@@ -21,12 +21,18 @@ namespace WpfApp_HW
         {
 
 
-            //Window f = new Window_MyNotePad_Command();
-            //Window f = new MainWindow();
-            //Form1 f = new Form1();
-            //FormPhotoHW f = new FormPhotoHW();
-            Window f = new Window_MyClock();
-            f.Show();
+            //Window c = new Window_MyNotePad_Command();
+            //Window b = new MainWindow();
+            //FormPhotoHW s = new FormPhotoHW();
+            //Window g = new Window_MyClock();
+            //Window f = new Window_MyBook();
+            Window p = new Window_FadeInOute();
+            //f.Show();
+            //c.Show();
+            //b.Show();
+            //s.Show();
+            //g.Show();
+            p.Show();
         }
     }
 }

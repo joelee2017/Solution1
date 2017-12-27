@@ -29,7 +29,15 @@ namespace WpfApp_HW
 
         public string Desc
         {
-            set { this.Label1.Content = value; }
+            set { this.label.Content = value; }
+        }
+
+        public ImageSource ImageSource
+        {
+            get
+            {
+                return this.Image1.Source;
+            }
         }
 
         public string ImageURL
@@ -62,7 +70,11 @@ namespace WpfApp_HW
 
         }
 
-        public string Id { get; set; }
+        public string Id
+        {
+            get;
+            set;
+        }
 
         public delegate void MyEventHandler(object sender, bool? IsFavor);//事件
         public event MyEventHandler NotifyMyFavor;

@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="Window_MyNotePad_Command" Height="300" Width="300">
     <Grid>
-        <Menu Margin="0,0,0,246">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Menu Margin="0,0,0,0.127">
             <MenuItem Header="File"/>
             <MenuItem Header="Edit">
                 <MenuItem Header="Cut" Click="MenuItem_Click">
-                    <MenuItem.Background>
-                        <ImageBrush/>
-                    </MenuItem.Background>
                 </MenuItem>
                 <MenuItem Header="Copy" Command="Copy"/>
                 <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
@@ -25,6 +26,11 @@
             </MenuItem>
 
         </Menu>
-        <TextBox Name="TextBox1" HorizontalAlignment="Left" Height="246" Margin="0,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="292"/>
+        <Viewbox Grid.Row="1" Stretch="Fill">
+            <!--換行 AcceptsReturn="True"-->
+            <TextBox x:Name="TextBox1"  AcceptsReturn="True" TextWrapping="Wrap" Text="TextBox" Height="246" Width="292"/>
+
+        </Viewbox>
+
     </Grid>
 </Window>

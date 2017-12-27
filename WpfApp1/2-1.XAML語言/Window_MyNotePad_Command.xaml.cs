@@ -41,6 +41,7 @@ namespace WpfApp1
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             this.TextBox1.Foreground = new SolidColorBrush(Colors.Red);
+            //SolidColorBrush 新增筆刷
         }
     }
 }
