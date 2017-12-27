@@ -19,20 +19,16 @@ namespace WpfApp_HW
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            Window c = new Window();
 
+             //c = new Window_MyNotePad_Command();
+             //c = new MainWindow();
+             //c = new FormPhotoHW();
+             //c = new Window_MyClock();
+             //c = new Window_MyBook();
+             c = new Window_FadeInOute();
 
-            //Window c = new Window_MyNotePad_Command();
-            //Window b = new MainWindow();
-            //FormPhotoHW s = new FormPhotoHW();
-            //Window g = new Window_MyClock();
-            //Window f = new Window_MyBook();
-            Window p = new Window_FadeInOute();
-            //f.Show();
-            //c.Show();
-            //b.Show();
-            //s.Show();
-            //g.Show();
-            p.Show();
+                c.Show();
         }
     }
 }

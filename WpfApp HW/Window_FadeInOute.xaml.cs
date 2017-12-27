@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,7 @@ namespace WpfApp_HW
         private void FadeOut_Completed(object sender, EventArgs e)
         {
             Application.Current.Shutdown();//關閉應用程式
-            MessageBox.Show("淡出")
+            MessageBox.Show("淡出");
         }
 
         private void Window_FadeInOute_Loaded(object sender, RoutedEventArgs e)
@@ -53,6 +54,35 @@ namespace WpfApp_HW
         private void SB1_Completed(object sender, EventArgs e)
         {
             MessageBox.Show("淡入");
+        }
+
+        bool isActive = false;
+        Point mousePosition;
+
+        private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point currentPosition = e.MouseDevice.GetPosition(this);
+
+            if(! isActive)// ! IsActive 
+            {
+                mousePosition = currentPosition;
+
+                Debug.WriteLine("First Time " + mousePosition.X);
+                this.Title = "First Time " + mousePosition.X + ", " + mousePosition.Y;
+                isActive = true;
+            }
+            else
+            {
+                if((Math.Abs(mousePosition.X - currentPosition.X) >50) || 
+                    (Math.Abs(mousePosition.Y - currentPosition.Y) >50))
+                {
+                    Debug.WriteLine(currentPosition.X);
+                    this.Title = currentPosition.X + ", " + currentPosition.Y;
+                    Application.Current.Shutdown();
+                }
+                    
+
+            }
         }
     }
 }

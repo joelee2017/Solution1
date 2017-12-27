@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_HW"
         mc:Ignorable="d" WindowState="Maximized"
-        Title="Window_FadeInOute" Height="300" Width="300">
+        Title="Window_FadeInOute" Height="300" Width="300" MouseMove="Window_MouseMove">
     <Window.Resources>
         <Storyboard  x:Key="fadeIn">
             <DoubleAnimation Storyboard.TargetName="grid1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:5">                                    
